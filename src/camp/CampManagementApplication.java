@@ -194,7 +194,7 @@ public class CampManagementApplication {
 
             switch (input) {
                 case 1 -> {
-                    System.out.println("어떤 수강생의 과목별 시험 회차 및 점수 등록하시겠습니까?");
+                    System.out.println("어떤 수강생의 과목별 시험 회차 및 점수 등록하시겠습니까? //닉네임을 입력해주세요!");
                     String name = sc.nextLine();
                     Student findStudent = studentStore.stream().filter( student -> student.getStudentName().equals(name) ).findFirst().orElseThrow();
                     createScore(findStudent); // 수강생의 과목별 시험 회차 및 점수 등록
@@ -235,10 +235,6 @@ public class CampManagementApplication {
                     round.addSubject(subject);
                 }
                 student.addRoundSubjectsMap(round);
-            }
-
-            for ( Map.Entry<Integer,Round> entry : student.getRoundSubjectsMap().entrySet() ) {
-                System.out.println(entry);
             }
 
 
