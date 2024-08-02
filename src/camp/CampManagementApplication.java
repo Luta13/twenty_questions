@@ -124,6 +124,7 @@ public class CampManagementApplication {
         String studentName = sc.next();
         Student student = new Student(sequence(INDEX_TYPE_STUDENT), studentName,subjectStore);
         studentStore.add(student);
+
         // 기능 구현 (필수 과목, 선택 과목)
         System.out.println("필수 과목 목록(최소 3개 이상)");
         System.out.println("1. Java");
@@ -163,6 +164,8 @@ public class CampManagementApplication {
         for (int i = 0; i < subjectStore.size(); i++) {
             System.out.println(subjectStore.get(i).getSubjectName() + " - " + subjectStore.get(i).getSubjectType());
         }
+        //한 학생의 과목 추가가 끝나면 초기화
+        subjectStore = new ArrayList<>();
     }
 
 
