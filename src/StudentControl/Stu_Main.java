@@ -1,8 +1,10 @@
 package StudentControl;//package StudentControl;
 
 import camp.model.Score;
+import camp.model.Student;
 import camp.model.Subject;
 
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -168,32 +170,79 @@ public class Stu_Main {
         System.out.println("\n수강생을 등록합니다...");
         System.out.print("수강생 이름 입력: ");
         String studentName = sc.next();
-
-        Stu_Inquiry student = new Stu_Inquiry(sequence(INDEX_TYPE_STUDENT), studentName);
-
-        // 과목을 선택하여 수강 목록에 추가
-        boolean moreSubjects = true;
-        while (moreSubjects) {
-            System.out.println("\n수강할 과목을 선택하세요...");
-            for (int i = 0; i < subjectStore.size(); i++) {
-                System.out.println((i + 1) + ". " + subjectStore.get(i).getSubjectName());
-            }
-            System.out.print("과목 번호 입력 (0은 종료): ");
-            int subjectIndex = sc.nextInt();
-
-            if (subjectIndex == 0) {
-                moreSubjects = false;
-            } else if (subjectIndex > 0 && subjectIndex <= subjectStore.size()) {
-                Subject selectedSubject = subjectStore.get(subjectIndex - 1);
-//                student.addSubject(selectedSubject);
-            } else {
-                System.out.println("잘못된 과목 번호입니다. 다시 시도하세요.");
-            }
+        Stu_Inquiry student = new Stu_Inquiry(sequence("ST"), studentName);
+        studentStore.add(student);
+        System.out.println("필수 과목 목록(최소 3개 이상)");
+        System.out.println("1. Java");
+        System.out.println("2. 객체지향");
+        System.out.println("3. Spring");
+        System.out.println("4. JPA");
+        System.out.println("5. MySQL");
+        System.out.println("필수 과목 입력 예시 -> Java 객체지향 Spring");
+        System.out.print("필수 과목 입력: ");
+        if (sc.hasNextLine()) {
+            sc.nextLine();
         }
 
-        studentStore.add(student);
-        System.out.println("수강생 등록 성공!\n");
+        String subjectString = sc.nextLine();
+        String[] SubjectsInput = subjectString.split(" ");
+
+        for(int i = 0; i < SubjectsInput.length; ++i) {
+            subjectStore.add(new Subject(sequence("SU"), SubjectsInput[i], SUBJECT_TYPE_MANDATORY));
+        }
+
+        System.out.println("선택 과목 목록(최소 2개 이상)");
+        System.out.println("1. 디자인 패턴");
+        System.out.println("2. Spring Security");
+        System.out.println("3. Redis");
+        System.out.println("4. MongoDB");
+        System.out.println("선택 과목 입력 예시 -> 디자인 패턴 Spring Security");
+        System.out.print("선택 과목 입력: ");
+        String subjectString2 = sc.nextLine();
+        String[] SubjectsInput2 = subjectString2.split(" ");
+
+        int i;
+        for(i = 0; i < SubjectsInput2.length; ++i) {
+            subjectStore.add(new Subject(sequence("SU"), SubjectsInput2[i], SUBJECT_TYPE_CHOICE));
+        }
+
+        for(i = 0; i < subjectStore.size(); ++i) {
+            PrintStream var10000 = System.out;
+            String var10001 = ((Subject)subjectStore.get(i)).getSubjectName();
+            var10000.println(var10001 + " - " + ((Subject)subjectStore.get(i)).getSubjectType());
+        }
+
     }
+//    private static void createStudent() {
+//        System.out.println("\n수강생을 등록합니다...");
+//        System.out.print("수강생 이름 입력: ");
+//        String studentName = sc.next();
+//
+//        Stu_Inquiry student = new Stu_Inquiry(sequence(INDEX_TYPE_STUDENT), studentName);
+//
+//        // 과목을 선택하여 수강 목록에 추가
+//        boolean moreSubjects = true;
+//        while (moreSubjects) {
+//            System.out.println("\n수강할 과목을 선택하세요...");
+//            for (int i = 0; i < subjectStore.size(); i++) {
+//                System.out.println((i + 1) + ". " + subjectStore.get(i).getSubjectName());
+//            }
+//            System.out.print("과목 번호 입력 (0은 종료): ");
+//            int subjectIndex = sc.nextInt();
+//
+//            if (subjectIndex == 0) {
+//                moreSubjects = false;
+//            } else if (subjectIndex > 0 && subjectIndex <= subjectStore.size()) {
+//                Subject selectedSubject = subjectStore.get(subjectIndex - 1);
+////                student.addSubject(selectedSubject);
+//            } else {
+//                System.out.println("잘못된 과목 번호입니다. 다시 시도하세요.");
+//            }
+//        }
+//
+//        studentStore.add(student);
+//        System.out.println("수강생 등록 성공!\n");
+//    }
 
     // 수강생 목록 조회
     public static void inquireStudent() {

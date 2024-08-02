@@ -11,7 +11,7 @@ public class Stu_Inquiry {
 
     // Getter
     public String getStudentId() {
-        return studentId;
+        return this.studentId;
     }
 
     public void setStudentId(String studentId) {
@@ -19,7 +19,7 @@ public class Stu_Inquiry {
     }
 
     public String getStudentName() {
-        return studentName;
+        return this.studentName;
     }
     public void setStudentName(String studentName) {
         this.studentName=studentName;
