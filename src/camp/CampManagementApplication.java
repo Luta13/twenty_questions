@@ -237,6 +237,10 @@ public class CampManagementApplication {
                 student.addRoundSubjectsMap(round);
             }
 
+            for ( Map.Entry<Integer,Round> entry : student.getRoundSubjectsMap().entrySet() ) {
+                System.out.println(entry);
+            }
+
 
             //학생의 필수과목 점수 기재공간
             while (flag) {
