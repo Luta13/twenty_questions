@@ -233,10 +233,50 @@ public class CampManagementApplication {
     // 수강생의 특정 과목 회차별 등급 조회
     private static void inquireRoundGradeBySubject() {
         String studentId = getStudentId(); // 관리할 수강생 고유 번호
+        String choiceSubject;
+        int[] Round = new int[10]; // 회차
+
+        System.out.println("조회할 과목을 입력해주세요.");
+        choiceSubject = sc.next();
+
+        boolean flag = findSubject(choiceSubject);
+        if(!flag)
+        {
+            return;
+        }
+
         // 기능 구현 (조회할 특정 과목)
         System.out.println("회차별 등급을 조회합니다...");
+        for(int i =0; i < Round.length; i++)
+        {
+            if(subjectStore.get(i).getSubjectName().equals(choiceSubject))
+            {
+                System.out.println(i+"회차 등급을 조회합니다.");
+
+            }
+        }
+
+
+
+
         // 기능 구현
         System.out.println("\n등급 조회 성공!");
+    }
+    private static boolean findSubject(String choiceSubject)
+    {
+
+        for(Subject subject : subjectStore)
+        {
+            if(choiceSubject.equals(subject.getSubjectName()))
+            {
+                System.out.println("올바른 과목 입력 완료.");
+                return true;
+
+            }
+        }
+            System.out.println("조회할 과목을 찾지 못하였습니다.");
+            return false;
+
     }
 
 }
