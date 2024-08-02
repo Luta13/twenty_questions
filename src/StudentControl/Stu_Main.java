@@ -246,7 +246,7 @@ public class Stu_Main {
 
     // 수강생 목록 조회
     public static void inquireStudent() {
-        System.out.println("\n수강생 목록을 조회합니다...");
+        System.out.println("\n수강생 목록을 조회합니다....");
         // 기능 구현
         if(studentStore.isEmpty()){
             System.out.println("등록된 수강생이 없습니다.");

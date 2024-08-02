@@ -27,7 +27,7 @@ public class Stu_Inquiry {
 
     @Override
     public String toString(){
-        return "(수강생) ID: " + studentId+" / 이름 : "+studentName;
+        return "(수강생)  ID: " + studentId+" / 이름 : "+studentName;
     }
 
 }
