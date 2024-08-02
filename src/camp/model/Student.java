@@ -5,25 +5,19 @@ import java.util.List;
 import java.util.Map;
 
 public class Student {
+
     private String studentId;
     private String studentName;
-    //Test
     private List<Subject> subjects;
     private Map<Integer, Round> roundSubjectsMap;
-    //Test
-
-    public Student(String seq, String studentName) {
-        this.studentId = seq;
-        this.studentName = studentName;
-    }
 
     public Student(String seq, String studentName, List<Subject> subjects) {
         this.studentId = seq;
         this.studentName = studentName;
         this.subjects = subjects;
         this.roundSubjectsMap = new HashMap<>();
-
     }
+
     public String getStudentId() {
         return studentId;
     }

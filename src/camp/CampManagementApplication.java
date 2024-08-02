@@ -168,7 +168,7 @@ public class CampManagementApplication {
         // 기능 구현 (필수 과목, 선택 과목)
 
 
-        Student student = new Student(sequence(INDEX_TYPE_STUDENT), studentName); // 수강생 인스턴스 생성 예시 코드
+//        Student student = new Student(sequence(INDEX_TYPE_STUDENT), studentName); // 수강생 인스턴스 생성 예시 코드
         // 기능 구현
         System.out.println("수강생 등록 성공!\n");
     }
@@ -194,6 +194,7 @@ public class CampManagementApplication {
 
             switch (input) {
                 case 1 -> {
+
                     Student student = new Student("1","nayoun340",subjectStore);
                     studentStore.add(student);
                     createScore(student); // 수강생의 과목별 시험 회차 및 점수 등록
@@ -217,7 +218,6 @@ public class CampManagementApplication {
     // 수강생의 과목별 시험 회차 및 점수 등록
     private static void createScore(Student stu) {
 
-
         //학생찾기결과를 Optional 로 반환받음
         Optional<String> findStudentId = studentStore.stream().map(Student::getStudentId).filter(id -> id.equals(stu.getStudentId())).findFirst();
 
@@ -228,7 +228,7 @@ public class CampManagementApplication {
             Student student = studentStore.get(Integer.parseInt(findStudentId.get()) -1);
             boolean flag = true;
 
-            //현재 학생의 모든 회차에 대한 디폴트값 적용 시키기
+            //현재 학생의 모든 회차에 대한 (과목 및 시험점수등) 디폴트값 적용 시키기
             for ( int i=1; i<=10; i++ ) {
                 Round round = new Round(i);
                 for ( Subject subject : student.getSubjects() ) {
@@ -276,6 +276,7 @@ public class CampManagementApplication {
                     int score = sc.nextInt();
                     // n회차에대한 과목,점수 저장
                     round.setSubject(student.getSubjectsMap(count).getSubject(subject),score);
+                    student.getSubjectsMap(count).getSubject(subject).setMandatoryRank(score);
                     System.out.println("등록이 정상적으로 마무리 되었습니다 !");
 
                 //선택
@@ -309,6 +310,8 @@ public class CampManagementApplication {
                     int score = sc.nextInt();
                     // n회차에대한 과목,점수 저장
                     round.setSubject(student.getSubjectsMap(count).getSubject(subject),score);
+                    student.getSubjectsMap(count).getSubject(subject).setChoiceRank(score);
+                    System.out.println(student.getSubjectsMap(count).getSubject(subject).getChoiceRank());
                     System.out.println("등록이 정상적으로 마무리 되었습니다 !");
                 } else {
                     flag = false;

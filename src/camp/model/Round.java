@@ -41,6 +41,7 @@ public class Round {
 
     public void setSubject(Score score, int intScore){
         score.setScore(intScore);
+
     }
 
 
