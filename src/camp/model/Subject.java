@@ -10,8 +10,7 @@ public class Subject {
         this.subjectName = subjectName;
         this.subjectType = subjectType;
     }
- // 테스트 123
-    // Getter
+
     public String getSubjectId() {
         return subjectId;
     }
@@ -24,4 +23,8 @@ public class Subject {
         return subjectType;
     }
 
+    @Override
+    public String toString() {
+        return "Subject{" + "subjectId='" + subjectId + '\'' + ", subjectName='" + subjectName + '\'' + ", subjectType='" + subjectType + '\'' + '}';
+    }
 }

@@ -1,12 +1,8 @@
 package camp;
 
-import camp.model.Score;
-import camp.model.Student;
-import camp.model.Subject;
+import camp.model.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Notification
@@ -20,7 +16,6 @@ public class CampManagementApplication {
     // 데이터 저장소
     private static List<Student> studentStore;
     private static List<Subject> subjectStore;
-    private static List<Score> scoreStore;
 
     // 과목 타입
     private static String SUBJECT_TYPE_MANDATORY = "MANDATORY";
@@ -33,6 +28,7 @@ public class CampManagementApplication {
     private static final String INDEX_TYPE_SUBJECT = "SU";
     private static int scoreIndex;
     private static final String INDEX_TYPE_SCORE = "SC";
+
 
     // 스캐너
     private static Scanner sc = new Scanner(System.in);
@@ -49,6 +45,7 @@ public class CampManagementApplication {
     // 초기 데이터 생성
     private static void setInitData() {
         studentStore = new ArrayList<>();
+        //Test
         subjectStore = List.of(
                 new Subject(
                         sequence(INDEX_TYPE_SUBJECT),
@@ -96,7 +93,6 @@ public class CampManagementApplication {
                         SUBJECT_TYPE_CHOICE
                 )
         );
-        scoreStore = new ArrayList<>();
     }
 
     // index 자동 증가
@@ -171,6 +167,7 @@ public class CampManagementApplication {
         String studentName = sc.next();
         // 기능 구현 (필수 과목, 선택 과목)
 
+
         Student student = new Student(sequence(INDEX_TYPE_STUDENT), studentName); // 수강생 인스턴스 생성 예시 코드
         // 기능 구현
         System.out.println("수강생 등록 성공!\n");
@@ -196,7 +193,11 @@ public class CampManagementApplication {
             int input = sc.nextInt();
 
             switch (input) {
-                case 1 -> createScore(); // 수강생의 과목별 시험 회차 및 점수 등록
+                case 1 -> {
+                    Student student = new Student("1","nayoun340",subjectStore);
+                    studentStore.add(student);
+                    createScore(student); // 수강생의 과목별 시험 회차 및 점수 등록
+                }
                 case 2 -> updateRoundScoreBySubject(); // 수강생의 과목별 회차 점수 수정
                 case 3 -> inquireRoundGradeBySubject(); // 수강생의 특정 과목 회차별 등급 조회
                 case 4 -> flag = false; // 메인 화면 이동
@@ -214,11 +215,117 @@ public class CampManagementApplication {
     }
 
     // 수강생의 과목별 시험 회차 및 점수 등록
-    private static void createScore() {
-        String studentId = getStudentId(); // 관리할 수강생 고유 번호
-        System.out.println("시험 점수를 등록합니다...");
-        // 기능 구현
-        System.out.println("\n점수 등록 성공!");
+    private static void createScore(Student stu) {
+
+
+        //학생찾기결과를 Optional 로 반환받음
+        Optional<String> findStudentId = studentStore.stream().map(Student::getStudentId).filter(id -> id.equals(stu.getStudentId())).findFirst();
+
+        //학생찾기 성공했을시, ture,false 반환
+        if (findStudentId.isPresent()) {
+            //여기까지왔다는건 무조건 findStudentId가 있다는 뜻이므로, 옵셔널 상자 개봉후, 값 반환
+            //일단 삭제 고려안함, idx 고려 배제
+            Student student = studentStore.get(Integer.parseInt(findStudentId.get()) -1);
+            boolean flag = true;
+
+            //현재 학생의 모든 회차에 대한 디폴트값 적용 시키기
+            for ( int i=1; i<=10; i++ ) {
+                Round round = new Round(i);
+                for ( Subject subject : student.getSubjects() ) {
+                    round.addSubject(subject);
+                }
+                student.addRoundSubjectsMap(round);
+            }
+
+
+            //학생의 필수과목 점수 기재공간
+            while (flag) {
+                System.out.println("'"+ student.getStudentName() + "'의 점수를 등록하실, 필수/선택 과목을 골라주세요");
+                System.out.println("1. 필수 2. 선택 3. 나가기");
+                int input = sc.nextInt();
+
+                //사용자가 번호를 눌렀을때 해당 필수과목으로 찾게하기위한 List
+                List<String> MmandatorySubjectList = new ArrayList<>();
+                //필수
+                if (input == 1) {
+                    System.out.println("'몇 회차' 과목의 점수를 등록 하시겠습니까?");
+                    int count = sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("현재 " + student.getStudentName() + " 학생의 " + count + "회차 필수과목 점수 등록 현황 상태입니다.");
+                    //현재 학생의 n 회차까지 데이터 저장 값들
+                    int i = 1;
+                    for (Map.Entry<String, Score> subject : student.getSubjectsMap(count).getSubjects().entrySet()) {
+                        //필수과목 일때만
+                        if (subject.getValue().getSubject().getSubjectType().equals(SUBJECT_TYPE_MANDATORY)) {
+                            MmandatorySubjectList.add(subject.getKey());
+                            if (subject.getValue().getScore() == -1)
+                                //등록이 됐다면
+                                System.out.print(i + "." + subject.getKey() + " : " + "[점수미등록] ");
+                                //점수 등록이 됐다면
+                            else System.out.print(i + "." + subject.getKey() + " : " + subject.getValue().getScore() + "점 ");
+                            ++i;
+                        }
+                    }
+                    System.out.println();
+                    Round round = new Round(count);
+                    System.out.println(count + "회차의 어떤 '과목'의 점수를 등록 하시겠습니까?");
+                    int subjectNumber = sc.nextInt();
+                    String subject = MmandatorySubjectList.get(subjectNumber-1);
+
+                    System.out.println(count + "회차의 " + subject + " 과목에 대해 '점수'를 등록 해주세요");
+                    int score = sc.nextInt();
+                    // n회차에대한 과목,점수 저장
+                    round.setSubject(student.getSubjectsMap(count).getSubject(subject),score);
+                    System.out.println("등록이 정상적으로 마무리 되었습니다 !");
+
+                //선택
+                } else if (input == 2) {
+                    System.out.println("'몇 회차' 과목의 점수를 등록 하시겠습니까?");
+                    int count = sc.nextInt();
+                    sc.nextLine();
+                    //사용자가 번호를 눌렀을때 해당 과목으로 찾게하기위한 List
+                    List<String> choiceSubjectList = new ArrayList<>();
+                    System.out.println("현재 " + student.getStudentName() + " 학생의 " + count + "회차 선택과목 점수 등록 현황 상태입니다.");
+                    //현재 학생의 n 회차까지 데이터 저장 값들
+                    int i = 1;
+                    for (Map.Entry<String, Score> subject : student.getSubjectsMap(count).getSubjects().entrySet()) {
+                        //선택과목 일때만
+                        if (subject.getValue().getSubject().getSubjectType().equals(SUBJECT_TYPE_CHOICE)) {
+                            choiceSubjectList.add(subject.getKey());
+                            if (subject.getValue().getScore() == -1)
+                                //등록이 됐다면
+                                System.out.print(i + "." + subject.getKey() + " : " + "[점수미등록] ");
+                                //점수 등록이 됐다면
+                            else System.out.print(i + "." + subject.getKey() + " : " + subject.getValue().getScore() + "점 ");
+                            ++i;
+                        }
+                    }
+                    System.out.println();
+                    Round round = new Round(count);
+                    int subjectNumber = sc.nextInt();
+                    String subject = choiceSubjectList.get(subjectNumber-1);
+
+                    System.out.println(count + "회차의 " + subject + " 과목에 대해 '점수'를 등록 해주세요");
+                    int score = sc.nextInt();
+                    // n회차에대한 과목,점수 저장
+                    round.setSubject(student.getSubjectsMap(count).getSubject(subject),score);
+                    System.out.println("등록이 정상적으로 마무리 되었습니다 !");
+                } else {
+                    flag = false;
+                    return;
+                }
+                //sc.nextInt() 하고나서는 개행문자 하나 새로생겨서 다음 작업에 오차 생길수있기떄문에, 하나 미리 띄어두기
+                sc.nextLine();
+            }
+
+            // ===== 랑 같이 출력되서 한줄 띄어줌
+            System.out.println();
+            return;
+        //학생찾기 실패시, 해당 함수 종료시키면서 돌려보냄
+        } else {
+            System.out.println("학생이 존재하지않습니다!");
+            return;
+        }
     }
 
     // 수강생의 과목별 회차 점수 수정
