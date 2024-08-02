@@ -180,8 +180,6 @@ public class CampManagementApplication {
                 System.out.println(stu_inquiry.getStudentId() + " - " + stu_inquiry.getStudentName());
             }
         }
-
-
         System.out.println("\n수강생 목록 조회 성공!");
     }
 
