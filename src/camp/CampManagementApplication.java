@@ -163,15 +163,23 @@ public class CampManagementApplication {
             subjectStore.add(new Subject(sequence(INDEX_TYPE_SUBJECT), SubjectsInput2[i], SUBJECT_TYPE_CHOICE));
         }
 
-        for(int i = 0;i<subjectStore.size();i++){
+        for (int i = 0; i < subjectStore.size(); i++) {
             System.out.println(subjectStore.get(i).getSubjectName() + " - " + subjectStore.get(i).getSubjectType());
         }
+
     }
 
 
     private static void inquireStudent() {
         System.out.println("\n수강생 목록을 조회합니다...");
         // 기능 구현
+        if (studentStore.isEmpty()) {
+            System.out.println("등록된 수강생이 없습니다.");
+        } else {
+            for (Student stu_inquiry : studentStore) {
+                System.out.println(stu_inquiry.getStudentId() + " - " + stu_inquiry.getStudentName());
+            }
+        }
         System.out.println("\n수강생 목록 조회 성공!");
     }
 
