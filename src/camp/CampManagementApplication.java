@@ -55,15 +55,15 @@ public class CampManagementApplication {
         switch (type) {
             case INDEX_TYPE_STUDENT -> {
                 studentIndex++;
-                return INDEX_TYPE_STUDENT + studentIndex;
+                return String.valueOf(studentIndex);
             }
             case INDEX_TYPE_SUBJECT -> {
                 subjectIndex++;
-                return INDEX_TYPE_SUBJECT + subjectIndex;
+                return String.valueOf(subjectIndex);
             }
             default -> {
                 scoreIndex++;
-                return INDEX_TYPE_SCORE + scoreIndex;
+                return String.valueOf(scoreIndex);
             }
         }
     }
@@ -122,7 +122,6 @@ public class CampManagementApplication {
         // 수강생 입력
         System.out.print("수강생 이름 입력: ");
         String studentName = sc.next();
-        //여기 체크하기 @@@
         Student student = new Student(sequence(INDEX_TYPE_STUDENT), studentName,subjectStore);
         studentStore.add(student);
         // 기능 구현 (필수 과목, 선택 과목)
@@ -191,12 +190,14 @@ public class CampManagementApplication {
             System.out.println("4. 메인 화면 이동");
             System.out.print("관리 항목을 선택하세요...");
             int input = sc.nextInt();
+            sc.nextLine();
 
             switch (input) {
                 case 1 -> {
-                    Student student = new Student("1","nayoun340",subjectStore);
-                    studentStore.add(student);
-                    createScore(student); // 수강생의 과목별 시험 회차 및 점수 등록
+                    System.out.println("어떤 수강생의 과목별 시험 회차 및 점수 등록하시겠습니까?");
+                    String name = sc.nextLine();
+                    Student findStudent = studentStore.stream().filter( student -> student.getStudentName().equals(name) ).findFirst().orElseThrow();
+                    createScore(findStudent); // 수강생의 과목별 시험 회차 및 점수 등록
                 }
                 case 2 -> updateRoundScoreBySubject(); // 수강생의 과목별 회차 점수 수정
                 case 3 -> inquireRoundGradeBySubject(); // 수강생의 특정 과목 회차별 등급 조회
@@ -234,6 +235,10 @@ public class CampManagementApplication {
                     round.addSubject(subject);
                 }
                 student.addRoundSubjectsMap(round);
+            }
+
+            for ( Map.Entry<Integer,Round> entry : student.getRoundSubjectsMap().entrySet() ) {
+                System.out.println(entry);
             }
 
 
