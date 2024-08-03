@@ -218,17 +218,64 @@ public class CampManagementApplication {
         String studentId = getStudentId(); // 관리할 수강생 고유 번호
         System.out.println("시험 점수를 등록합니다...");
         // 기능 구현
+
+
+
         System.out.println("\n점수 등록 성공!");
     }
 
-    // 수강생의 과목별 회차 점수 수정
+    // 수강생의 특정 과목의 특정 회차 점수 수정
     private static void updateRoundScoreBySubject() {
-        String studentId = getStudentId(); // 관리할 수강생 고유 번호
-        // 기능 구현 (수정할 과목 및 회차, 점수)
-        System.out.println("시험 점수를 수정합니다...");
-        // 기능 구현
-        System.out.println("\n점수 수정 성공!");
+
+        /** <필요한 정보 목록>:
+         * 1. 수강생 고유 번호(수강생 특정)
+         * 2. 과목 고유 번호(수정할 과목 특정)
+         * 3. 회차(해당 과목의 수정할 회차)
+         * 4. 수정할 점수
+         **/
+
+        String studentId = getStudentId(); // 1. 관리할 수강생 고유 번호 입력
+
+        // 점수 수정할 과목 선택(입력)
+        System.out.println("점수를 수정할 과목을 선택하세요: ");
+        String subjectId = sc.next(); // 2. 선택할 과목 고유 번호 입력
+
+        // 선택한 수강생의 과목의 점수 객체 찾기
+        scoreStore.stream()
+                .filter(score -> score.getStudentId().equals(studentId) && score.getSubjectId().equals(subjectId))
+                .forEach(score -> {
+                    // 점수 수정 작업을 스트림에서 수행
+                    System.out.println("점수를 수정할 회차를 선택하세요: ");
+                    int times = sc.nextInt(); // 선택할 회차 입력
+
+                    System.out.println("수정할 점수를 입력하세요: ");
+                    int modifyScore = sc.nextInt(); // 수정할 점수 입력
+
+                    System.out.println("시험 점수를 수정합니다...");
+
+                    // 점수 수정
+                    score.updateScore(times, modifyScore); // 점수 수정
+                    System.out.println("\n점수 수정 성공!");
+                });
     }
+
+//    for (Score score : scoreStore) {
+//        if (score.getStudentId().equals(studentId) && score.getSubjectId().equals(subjectId)) {
+//            System.out.println("점수를 수정할 회차를 선택하세요: ");
+//            int times = sc.nextInt();
+//
+//            System.out.println("수정할 점수를 입력하세요: ");
+//            int modifyScore = sc.nextInt();
+//
+//            System.out.println("시험 점수를 수정합니다...");
+//
+//            // 점수 수정
+//            score.updateScore(times, modifyScore);
+//            System.out.println("\n점수 수정 성공!");
+//
+//        }
+//    }
+
 
     // 수강생의 특정 과목 회차별 등급 조회
     private static void inquireRoundGradeBySubject() {
@@ -240,3 +287,5 @@ public class CampManagementApplication {
     }
 
 }
+
+
