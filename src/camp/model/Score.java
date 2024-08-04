@@ -61,3 +61,17 @@ public class Score {
         return "Score{" + "subjectName='" + subjectName + '\'' + ", score=" + score + ", subject=" + subject + ", choiceRank=" + choiceRank + ", mandatoryRank=" + mandatoryRank + '}';
     }
 }
+
+//    public String getStudentId() {
+//        return studentId;
+//    }
+//
+//    public String getGrade() {
+//        return Grade;
+//    }
+//
+//    public void updateScore(int times, int score) {
+//        this.scores[times - 1] = score;
+//    }
+//}
+
