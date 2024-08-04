@@ -163,6 +163,14 @@ public class CampManagementApplication {
         for (int i = 0; i < subjectStore.size(); i++) {
             System.out.println(subjectStore.get(i).getSubjectName() + " - " + subjectStore.get(i).getSubjectType());
         }
+//        현재 학생의 모든 회차에 대한 (과목 및 시험점수등) 디폴트값 적용 시키기
+        for (int i = 1; i <= 10; i++) {
+            Round round = new Round(i);
+            for (Subject subject : student.getSubjects()) {
+                round.addSubject(subject);
+            }
+            student.addRoundSubjectsMap(round);
+        }
         subjectStore = new ArrayList<>();
     }
 
@@ -229,14 +237,6 @@ public class CampManagementApplication {
             Student student = studentStore.get(Integer.parseInt(findStudentId.get()) - 1);
             boolean flag = true;
 
-            //현재 학생의 모든 회차에 대한 (과목 및 시험점수등) 디폴트값 적용 시키기
-            for (int i = 1; i <= 10; i++) {
-                Round round = new Round(i);
-                for (Subject subject : student.getSubjects()) {
-                    round.addSubject(subject);
-                }
-                student.addRoundSubjectsMap(round);
-            }
 
 
             //학생의 필수과목 점수 기재공간
@@ -260,7 +260,7 @@ public class CampManagementApplication {
                         if (subject.getValue().getSubject().getSubjectType().equals(SUBJECT_TYPE_MANDATORY)) {
                             MmandatorySubjectList.add(subject.getKey());
                             if (subject.getValue().getScore() == -1)
-                                //등록이 됐다면
+                                //점수 등록이 안됐다면
                                 System.out.print(i + "." + subject.getKey() + " : " + "[점수미등록] ");
                                 //점수 등록이 됐다면
                             else
