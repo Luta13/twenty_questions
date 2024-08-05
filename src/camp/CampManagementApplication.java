@@ -127,41 +127,53 @@ public class CampManagementApplication {
         String studentName = sc.next();
         Student student = new Student(sequence(INDEX_TYPE_STUDENT), studentName);
         studentStore.add(student);
+
         // 기능 구현 (필수 과목, 선택 과목)
-        System.out.println("필수 과목 목록(최소 3개 이상)");
-        System.out.println("1. Java");
-        System.out.println("2. 객체지향");
-        System.out.println("3. Spring");
-        System.out.println("4. JPA");
-        System.out.println("5. MySQL");
-        System.out.println("필수 과목 입력 예시 -> Java 객체지향 Spring");
-        System.out.print("필수 과목 입력: ");
 
-        if (sc.hasNextLine()) {
-            sc.nextLine();
+        // 필수 과목 3개 이상 입력하기
+        while (true) {
+            System.out.println("필수 과목 목록(최소 3개 이상)");
+            System.out.println("1. Java");
+            System.out.println("2. 객체지향");
+            System.out.println("3. Spring");
+            System.out.println("4. JPA");
+            System.out.println("5. MySQL");
+            System.out.println("필수 과목 입력 예시 -> Java 객체지향 Spring");
+            System.out.print("필수 과목 입력: ");
+            String subjectString = sc.nextLine();
+            String[] SubjectsInput = subjectString.split(" ");
+            if (SubjectsInput.length < 3) {
+                System.out.println("최소 3개 이상 입력해주세요.");
+            } else {
+                for (int i = 0; i < SubjectsInput.length; i++) {
+                    subjectStore.add(new Subject(sequence(INDEX_TYPE_SUBJECT), SubjectsInput[i], SUBJECT_TYPE_MANDATORY));
+                }
+                break;
+            }
         }
 
-        String subjectString = sc.nextLine();
-        String[] SubjectsInput = subjectString.split(" ");
+        // 선택 과목 2개 이상 입력
+        while(true){
+            System.out.println("선택 과목 목록(최소 2개 이상)");
+            System.out.println("1. 디자인 패턴");
+            System.out.println("2. Spring Security");
+            System.out.println("3. Redis");
+            System.out.println("4. MongoDB");
+            System.out.println("선택 과목 입력 예시 -> 디자인 패턴 Spring Security");
+            System.out.print("선택 과목 입력: ");
+            String subjectString2 = sc.nextLine();
+            String[] SubjectsInput2 = subjectString2.split(" ");
 
-        for (int i = 0; i < SubjectsInput.length; i++) {
-            subjectStore.add(new Subject(sequence(INDEX_TYPE_SUBJECT), SubjectsInput[i], SUBJECT_TYPE_MANDATORY));
+            if(SubjectsInput2.length<2){
+                System.out.println("최소 2개 이상 입력해주세요.");
+            }else{
+                for (int i = 0; i < SubjectsInput2.length; i++) {
+                    subjectStore.add(new Subject(sequence(INDEX_TYPE_SUBJECT), SubjectsInput2[i], SUBJECT_TYPE_CHOICE));
+                }
+                break;
+            }
         }
 
-        // 선택 과목 입력
-        System.out.println("선택 과목 목록(최소 2개 이상)");
-        System.out.println("1. 디자인 패턴");
-        System.out.println("2. Spring Security");
-        System.out.println("3. Redis");
-        System.out.println("4. MongoDB");
-        System.out.println("선택 과목 입력 예시 -> 디자인 패턴 Spring Security");
-        System.out.print("선택 과목 입력: ");
-        String subjectString2 = sc.nextLine();
-        String[] SubjectsInput2 = subjectString2.split(" ");
-
-        for (int i = 0; i < SubjectsInput2.length; i++) {
-            subjectStore.add(new Subject(sequence(INDEX_TYPE_SUBJECT), SubjectsInput2[i], SUBJECT_TYPE_CHOICE));
-        }
 
         for (int i = 0; i < subjectStore.size(); i++) {
             System.out.println(subjectStore.get(i).getSubjectName() + " - " + subjectStore.get(i).getSubjectType());
