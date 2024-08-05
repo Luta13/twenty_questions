@@ -253,13 +253,14 @@ public class CampManagementApplication {
                 //사용자가 번호를 눌렀을때 해당 필수과목으로 찾게하기위한 List
                 List<String> subjectList = new ArrayList<>();
 
-                System.out.println("'몇 회차' 과목의 점수를 등록 하시겠습니까?");
+                System.out.println("'몇 회차' 과목의 점수를 등록 하시겠습니까? //번호를 입력해 주세요 !");
                 int count = sc.nextInt();
                 // 1 ~ 10 사이의 숫자가 아닌회차의 경우 exception 처리
                 if (!(count >= 1 && count <= 10) ){
                     throw new HandleMisMatchRound();
                 }
                 sc.nextLine();
+                System.out.println(count);
                 System.out.println("현재 " + student.getStudentName() + " 학생의 " + count + "회차 필수,선택 과목 점수 등록 현황 상태입니다.");
                 //현재 학생의 n 회차까지 데이터 저장 값들
                 int i = 1;
@@ -303,10 +304,6 @@ public class CampManagementApplication {
             }
         }
     }
-
-
-
-
 
     // 수강생의 과목별 회차 점수 수정 메서드
     private static void updateRoundScoreBySubject() {
@@ -418,77 +415,5 @@ public class CampManagementApplication {
 
         // 기능 구현
         System.out.println("\n등급 조회 성공!");
-    }
-
-    public static List<Student> getStudentStore() {
-        return studentStore;
-    }
-
-    public static void setStudentStore(List<Student> studentStore) {
-        CampManagementApplication.studentStore = studentStore;
-    }
-
-    public static List<Subject> getSubjectStore() {
-        return subjectStore;
-    }
-
-    public static void setSubjectStore(List<Subject> subjectStore) {
-        CampManagementApplication.subjectStore = subjectStore;
-    }
-
-    public static List<Score> getScoreStore() {
-        return scoreStore;
-    }
-
-    public static void setScoreStore(List<Score> scoreStore) {
-        CampManagementApplication.scoreStore = scoreStore;
-    }
-
-    public static String getSubjectTypeMandatory() {
-        return SUBJECT_TYPE_MANDATORY;
-    }
-
-    public static void setSubjectTypeMandatory(String subjectTypeMandatory) {
-        SUBJECT_TYPE_MANDATORY = subjectTypeMandatory;
-    }
-
-    public static String getSubjectTypeChoice() {
-        return SUBJECT_TYPE_CHOICE;
-    }
-
-    public static void setSubjectTypeChoice(String subjectTypeChoice) {
-        SUBJECT_TYPE_CHOICE = subjectTypeChoice;
-    }
-
-    public static int getStudentIndex() {
-        return studentIndex;
-    }
-
-    public static void setStudentIndex(int studentIndex) {
-        CampManagementApplication.studentIndex = studentIndex;
-    }
-
-    public static int getSubjectIndex() {
-        return subjectIndex;
-    }
-
-    public static void setSubjectIndex(int subjectIndex) {
-        CampManagementApplication.subjectIndex = subjectIndex;
-    }
-
-    public static int getScoreIndex() {
-        return scoreIndex;
-    }
-
-    public static void setScoreIndex(int scoreIndex) {
-        CampManagementApplication.scoreIndex = scoreIndex;
-    }
-
-    public static Scanner getSc() {
-        return sc;
-    }
-
-    public static void setSc(Scanner sc) {
-        CampManagementApplication.sc = sc;
     }
 }
