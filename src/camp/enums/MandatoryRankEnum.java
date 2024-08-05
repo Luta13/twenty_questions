@@ -1,6 +1,7 @@
 package camp.enums;
 
-public enum MandatoryRankEnum {
+public enum
+MandatoryRankEnum {
     A(95),
     B(90),
     C(80),
