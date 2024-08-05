@@ -2,10 +2,7 @@ package camp;
 
 import camp.enums.ChoiceRankEnum;
 import camp.enums.MandatoryRankEnum;
-import camp.exceptions.HandleMisMatchRound;
-import camp.exceptions.HandleMisMatchScore;
-import camp.exceptions.HandleMisMatchSelect;
-import camp.exceptions.HandleMisMatchStudent;
+import camp.exceptions.*;
 import camp.model.*;
 
 import java.util.*;
@@ -246,108 +243,69 @@ public class CampManagementApplication {
 
         //학생의 필수과목 점수 기재공간
         while (flag) {
-            System.out.println("'" + student.getStudentName() + "'의 점수를 등록하실, 필수/선택 과목을 골라주세요 //번호를 입력해주세요!");
-            System.out.println("1. 필수 2. 선택 3. 나가기");
-            int input = sc.nextInt();
-            //잘못된 번호를 골랐을때
-            if (input != 1 && input != 2 && input != 3) throw new HandleMisMatchSelect();
+            try {
+                System.out.println("'" + student.getStudentName() + "'의 점수를 등록할 선택지 입니다. //번호를 입력해주세요!");
+                System.out.println("1. 점수등록 2. 나가기");
+                int input = sc.nextInt();
+                //잘못된 번호를 골랐을때
+                if (input == 1) {
+                } else if (input == 2) {
+                    flag = false;
+                    return;
+                } else {
+                    throw new HandleMisMatchSelect();
+                }
 
-            //사용자가 번호를 눌렀을때 해당 필수과목으로 찾게하기위한 List
-            List<String> mandatorySubjectList = new ArrayList<>();
-            //필수
-            if (input == 1) {
+                //사용자가 번호를 눌렀을때 해당 필수과목으로 찾게하기위한 List
+                List<String> subjectList = new ArrayList<>();
+
                 System.out.println("'몇 회차' 과목의 점수를 등록 하시겠습니까?");
                 int count = sc.nextInt();
                 // 1 ~ 10 사이의 숫자가 아닌회차의 경우 exception 처리
-                if (!(count >= 1 && count <= 10)) throw new HandleMisMatchRound();
+                if (!(count >= 1 && count <= 10) ){
+                    throw new HandleMisMatchRound();
+                }
                 sc.nextLine();
-                System.out.println("현재 " + student.getStudentName() + " 학생의 " + count + "회차 필수과목 점수 등록 현황 상태입니다.");
+                System.out.println("현재 " + student.getStudentName() + " 학생의 " + count + "회차 필수,선택 과목 점수 등록 현황 상태입니다.");
                 //현재 학생의 n 회차까지 데이터 저장 값들
                 int i = 1;
                 for (Map.Entry<String, Score> subject : student.getSubjectsMap(count).getSubjects().entrySet()) {
-                    //필수과목 일때만
-                    if (subject.getValue().getSubject().getSubjectType().equals(SUBJECT_TYPE_MANDATORY)) {
-                        mandatorySubjectList.add(subject.getKey());
-                        if (subject.getValue().getScore() == -1)
-                            //점수 등록이 안됐다면
-                            System.out.print(i + "." + subject.getKey() + " : " + "[점수미등록] ");
-                            //점수 등록이 됐다면
-                        else
-                            System.out.print(i + "." + subject.getKey() + " : " + subject.getValue().getScore() + "점 ");
-                        ++i;
+                    //필수,선택 과목 분기점
+                    subjectList.add(subject.getKey());
+                    if (subject.getValue().getScore() == -1) {
+                        //점수 등록이 안됐다면
+                        System.out.print(i + "." + subject.getKey() + " : " + "[점수미등록] ");
                     }
+                    //점수 등록이 됐다면
+                    else System.out.print(i + "." + subject.getKey() + " : " + subject.getValue().getScore() + "점 ");
+                    ++i;
                 }
                 System.out.println();
                 Round round = new Round(count);
                 System.out.println(count + "회차의 어떤 '과목'의 점수를 등록 하시겠습니까? //번호를 입력해주세요!");
                 int subjectNumber = sc.nextInt();
                 // 1 ~ 필수과목의 size 이외의 숫자라면 exception 처리
-                if ( !(subjectNumber >= 1 && subjectNumber <= mandatorySubjectList.size()) ) throw new HandleMisMatchSelect();
-                String subject = mandatorySubjectList.get(subjectNumber - 1);
+                if (!(subjectNumber >= 1 && subjectNumber <= subjectList.size())) throw new HandleMisMatchSelect();
+                // subjectList 에서 사용자가 고른 idx 의 글자를 가져옴
+                String subject = subjectList.get(subjectNumber - 1);
 
                 System.out.println(count + "회차의 " + subject + " 과목에 대해 '점수'를 등록 해주세요");
                 int score = sc.nextInt();
                 // 0 ~ 100 숫자가 아니라면 exception 처리
-                if ( !(score >= 0 && score <= 100) ) throw new HandleMisMatchScore();
-                // n회차에대한 과목,점수 저장
+                if (!(score >= 0 && score <= 100)) throw new HandleMisMatchScore();
+                // n 회차에대한 과목,점수 저장
                 round.setSubject(student.getSubjectsMap(count).getSubject(subject), score);
                 student.getSubjectsMap(count).getSubject(subject).setMandatoryRank(score);
                 System.out.println("등록이 정상적으로 마무리 되었습니다 !");
-
-                //선택
-            } else if (input == 2) {
-                System.out.println("'몇 회차' 과목의 점수를 등록 하시겠습니까?");
-                int count = sc.nextInt();
-                if (!(count >= 1 && count <= 10)) throw new HandleMisMatchRound();
-                sc.nextLine();
-                //사용자가 번호를 눌렀을때 해당 과목으로 찾게하기위한 List
-                List<String> choiceSubjectList = new ArrayList<>();
-                System.out.println("현재 " + student.getStudentName() + " 학생의 " + count + "회차 선택과목 점수 등록 현황 상태입니다. //번호를 입력해주세요!");
-                //현재 학생의 n 회차까지 데이터 저장 값들
-                int i = 1;
-                for (Map.Entry<String, Score> subject : student.getSubjectsMap(count).getSubjects().entrySet()) {
-                    //선택과목 일때만
-                    if (subject.getValue().getSubject().getSubjectType().equals(SUBJECT_TYPE_CHOICE)) {
-                        choiceSubjectList.add(subject.getKey());
-                        if (subject.getValue().getScore() == -1)
-                            //등록이 됐다면
-                            System.out.print(i + "." + subject.getKey() + " : " + "[점수미등록] ");
-                            //점수 등록이 됐다면
-                        else
-                            System.out.print(i + "." + subject.getKey() + " : " + subject.getValue().getScore() + "점 ");
-                        ++i;
-                    }
-                }
-                System.out.println();
-                Round round = new Round(count);
-                int subjectNumber = sc.nextInt();
-                if ( !(subjectNumber >= 1 && subjectNumber <= choiceSubjectList.size()) ) throw new HandleMisMatchSelect();
-                String subject = choiceSubjectList.get(subjectNumber - 1);
-                // 1 ~ 필수과목의 size 이외의 숫자라면 exception 처리
-
-
-                System.out.println(count + "회차의 " + subject + " 과목에 대해 '점수'를 등록 해주세요");
-                int score = sc.nextInt();
-                if ( !(score >= 0 && score <= 100) ) throw new HandleMisMatchScore();
-
-                // n회차에대한 과목,점수 저장
-                round.setSubject(student.getSubjectsMap(count).getSubject(subject), score);
-                student.getSubjectsMap(count).getSubject(subject).setChoiceRank(score);
-                System.out.println(student.getSubjectsMap(count).getSubject(subject).getChoiceRank());
-                System.out.println("등록이 정상적으로 마무리 되었습니다 !");
-            } else {
-                flag = false;
-                return;
+            } catch (InputMismatchException e) {
+                throw new HandleMisMatchNotNumber();
             }
-            //sc.nextInt() 하고나서는 개행문자 하나 새로생겨서 다음 작업에 오차 생길수있기떄문에, 하나 미리 띄어두기
-            sc.nextLine();
         }
-
-        // ===== 랑 같이 출력되서 한줄 띄어줌
-        System.out.println();
-        return;
-        //학생찾기 실패시, 해당 함수 종료시키면서 돌려보냄
     }
+
+
+
+
 
     // 수강생의 과목별 회차 점수 수정 메서드
     private static void updateRoundScoreBySubject() {
