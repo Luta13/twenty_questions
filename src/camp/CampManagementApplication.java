@@ -241,7 +241,6 @@ public class CampManagementApplication {
 
         boolean flag = true;
 
-        //학생의 필수과목 점수 기재공간
         while (flag) {
             try {
                 System.out.println("'" + student.getStudentName() + "'의 점수를 등록할 선택지 입니다. //번호를 입력해주세요!");
@@ -270,7 +269,6 @@ public class CampManagementApplication {
                 //현재 학생의 n 회차까지 데이터 저장 값들
                 int i = 1;
                 for (Map.Entry<String, Score> subject : student.getSubjectsMap(count).getSubjects().entrySet()) {
-                    //필수,선택 과목 분기점
                     subjectList.add(subject.getKey());
                     if (subject.getValue().getScore() == -1) {
                         //점수 등록이 안됐다면
