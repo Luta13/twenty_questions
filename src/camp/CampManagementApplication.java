@@ -71,7 +71,7 @@ public class CampManagementApplication {
         }
     }
 
-    private static void displayMainView() throws InterruptedException, Exception {
+    private static void displayMainView() throws InterruptedException {
         boolean flag = true;
         while (flag) {
             System.out.println("\n==================================");
@@ -95,7 +95,7 @@ public class CampManagementApplication {
         System.out.println("프로그램을 종료합니다.");
     }
 
-    private static void displayStudentView() throws Exception {
+    private static void displayStudentView() {
         boolean flag = true;
         while (flag) {
             System.out.println("==================================");
@@ -202,7 +202,7 @@ public class CampManagementApplication {
         System.out.println("\n수강생 목록 조회 성공!");
     }
 
-    private static void displayScoreView() throws Exception {
+    private static void displayScoreView() {
         boolean flag = true;
         while (flag) {
             System.out.println("==================================");
@@ -234,22 +234,18 @@ public class CampManagementApplication {
     }
 
     // 수강생의 과목별 시험 회차 및 점수 등록
-    private static void createScore() throws Exception {
-        System.out.println("어떤 수강생의 과목별 시험 회차 및 점수 등록하시겠습니까? //이름을 입력해주세요!");
-        String name = sc.nextLine();
-        Student student = studentStore.stream().filter(stu -> stu.getStudentName().equals(name)).findFirst().orElseThrow(HandleMisMatchStudent::new);
-
-        boolean flag = true;
-
-        while (flag) {
+    private static void createScore()  {
+        while (true) {
             try {
+                System.out.println("어떤 수강생의 과목별 시험 회차 및 점수 등록하시겠습니까? //이름을 입력해주세요!");
+                String name = sc.nextLine();
+                Student student = studentStore.stream().filter(stu -> stu.getStudentName().equals(name)).findFirst().orElseThrow(HandleMisMatchStudent::new);
                 System.out.println("'" + student.getStudentName() + "'의 점수를 등록할 선택지 입니다. //번호를 입력해주세요!");
                 System.out.println("1. 점수등록 2. 나가기");
                 int input = sc.nextInt();
                 //잘못된 번호를 골랐을때
                 if (input == 1) {
                 } else if (input == 2) {
-                    flag = false;
                     return;
                 } else {
                     throw new HandleMisMatchSelect();
@@ -291,12 +287,20 @@ public class CampManagementApplication {
                 int score = sc.nextInt();
                 // 0 ~ 100 숫자가 아니라면 exception 처리
                 if (!(score >= 0 && score <= 100)) throw new HandleMisMatchScore();
+
+                //이미 점수가 등록되어있다면
+                if ( student.getSubjectsMap(count).getSubject(subject).getScore() != -1 ) throw new HandleDuplicateScore();
                 // n 회차에대한 과목,점수 저장
                 round.setSubject(student.getSubjectsMap(count).getSubject(subject), score);
                 student.getSubjectsMap(count).getSubject(subject).setMandatoryRank(score);
                 System.out.println("등록이 정상적으로 마무리 되었습니다 !");
             } catch (InputMismatchException e) {
-                throw new HandleMisMatchNotNumber();
+                sc.next();
+                System.out.println("Error : " +  new HandleMisMatchNotNumber().getMessage());
+                return;
+            } catch (Exception e) {
+                System.out.println("Error : " +  e.getMessage());
+                return;
             }
         }
     }
