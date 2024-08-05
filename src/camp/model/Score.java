@@ -4,12 +4,7 @@ import camp.enums.ChoiceRankEnum;
 import camp.enums.MandatoryRankEnum;
 
 public class Score {
-<<<<<<< HEAD
-    private String scoreId;
-    
-    public Score(String seq) {
-        this.scoreId = seq;
-=======
+
     private String subjectName;
     private int score;
     private Subject subject;
@@ -20,7 +15,6 @@ public class Score {
         this.subjectName = subjectName;
         this.score = score;
         this.subject = subject;
->>>>>>> a0f632fe9bf893bcb1b9242080ba43e8519c75ed
     }
 
     public String getSubjectName() {

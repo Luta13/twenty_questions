@@ -1,5 +1,7 @@
 package camp;
 
+import camp.enums.ChoiceRankEnum;
+import camp.enums.MandatoryRankEnum;
 import camp.model.*;
 
 import java.util.*;
@@ -149,7 +151,7 @@ public class CampManagementApplication {
         }
 
         // 선택 과목 2개 이상 입력
-        while(true){
+        while (true) {
             System.out.println("선택 과목 목록(최소 2개 이상)");
             System.out.println("1. 디자인 패턴");
             System.out.println("2. Spring Security");
@@ -159,12 +161,12 @@ public class CampManagementApplication {
             System.out.print("선택 과목 입력: ");
             String subjectString2 = sc.nextLine();
             String[] SubjectsInput2 = subjectString2.split(" ");
-        String subjectString = sc.nextLine();
-        String[] SubjectsInput = subjectString.split(",");
+            String subjectString = sc.nextLine();
+            String[] SubjectsInput = subjectString.split(",");
 
-            if(SubjectsInput2.length<2){
+            if (SubjectsInput2.length < 2) {
                 System.out.println("최소 2개 이상 입력해주세요.");
-            }else{
+            } else {
                 for (int i = 0; i < SubjectsInput2.length; i++) {
                     subjectStore.add(new Subject(sequence(INDEX_TYPE_SUBJECT), SubjectsInput2[i], SUBJECT_TYPE_CHOICE));
                 }
@@ -248,7 +250,6 @@ public class CampManagementApplication {
             //일단 삭제 고려안함, idx 고려 배제
             Student student = studentStore.get(Integer.parseInt(findStudentId.get()) - 1);
             boolean flag = true;
-
 
 
             //학생의 필수과목 점수 기재공간
@@ -435,51 +436,35 @@ public class CampManagementApplication {
 
     // 수강생의 특정 과목 회차별 등급 조회
     private static void inquireRoundGradeBySubject() {
-        String studentId = getStudentId(); // 관리할 수강생 고유 번호
-        String choiceSubject;
-        int[] Round = new int[10]; // 회차
-
+        System.out.println("관리할 수강생의 이름을 입력해주세요!");
+        String studentName = sc.nextLine();
+        Student foundStudent = studentStore.stream()
+                .filter(stu -> stu.getStudentName().equalsIgnoreCase(studentName))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("학생 이름 " + studentName + "을 찾지 못했습니다."));
         System.out.println("조회할 과목을 입력해주세요.");
-        choiceSubject = sc.next();
+        String subjectName = sc.nextLine();
 
-        boolean flag = findSubject(choiceSubject);
-        if(!flag)
-        {
-            return;
-        }
 
-        // 기능 구현 (조회할 특정 과목)
-        System.out.println("회차별 등급을 조회합니다...");
-        for(int i =0; i < Round.length; i++)
-        {
-            if(subjectStore.get(i).getSubjectName().equals(choiceSubject))
+        for (int i = 1; i <= 10; i++) {
+            Score score = foundStudent.getSubjectsMap(i).getSubject(subjectName);
+            int sc = score.getScore();
+
+            if(score.getSubject().getSubjectType().equals(SUBJECT_TYPE_MANDATORY)) {
+                MandatoryRankEnum Rank = MandatoryRankEnum.getRank(sc);
+                System.out.println((i)+ "회차의 등급은 " + Rank + "입니다.");
+
+            }
+            else
             {
-                System.out.println(i+"회차 등급을 조회합니다.");
+                ChoiceRankEnum Rank = ChoiceRankEnum.getRank(sc);
+                System.out.println((i) + "회차의 등급은 " + Rank + "입니다.");
 
             }
         }
-
-
-
 
         // 기능 구현
         System.out.println("\n등급 조회 성공!");
-    }
-    private static boolean findSubject(String choiceSubject)
-    {
-
-        for(Subject subject : subjectStore)
-        {
-            if(choiceSubject.equals(subject.getSubjectName()))
-            {
-                System.out.println("올바른 과목 입력 완료.");
-                return true;
-
-            }
-        }
-            System.out.println("조회할 과목을 찾지 못하였습니다.");
-            return false;
 
     }
-
 }
