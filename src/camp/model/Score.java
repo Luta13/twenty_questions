@@ -4,6 +4,7 @@ import camp.enums.ChoiceRankEnum;
 import camp.enums.MandatoryRankEnum;
 
 public class Score {
+
     private String subjectName;
     private int score;
     private Subject subject;
