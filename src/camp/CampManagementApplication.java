@@ -1,5 +1,7 @@
 package camp;
 
+import camp.enums.ChoiceRankEnum;
+import camp.enums.MandatoryRankEnum;
 import camp.model.*;
 
 import java.util.*;
@@ -124,40 +126,52 @@ public class CampManagementApplication {
         String studentName = sc.next();
         Student student = new Student(sequence(INDEX_TYPE_STUDENT), studentName, subjectStore);
         studentStore.add(student);
+
         // 기능 구현 (필수 과목, 선택 과목)
-        System.out.println("필수 과목 목록(최소 3개 이상)");
-        System.out.println("1. Java");
-        System.out.println("2. 객체지향");
-        System.out.println("3. Spring");
-        System.out.println("4. JPA");
-        System.out.println("5. MySQL");
-        System.out.println("필수 과목 입력 예시 -> Java, 객체지향, Spring");
-        System.out.print("필수 과목 입력: ");
-
-        if (sc.hasNextLine()) {
-            sc.nextLine();
+        // 필수 과목 3개 이상 입력하기
+        while (true) {
+            System.out.println("필수 과목 목록(최소 3개 이상)");
+            System.out.println("1. Java");
+            System.out.println("2. 객체지향");
+            System.out.println("3. Spring");
+            System.out.println("4. JPA");
+            System.out.println("5. MySQL");
+            System.out.println("필수 과목 입력 예시 -> Java 객체지향 Spring");
+            System.out.print("필수 과목 입력: ");
+            String subjectString = sc.nextLine();
+            String[] SubjectsInput = subjectString.split(" ");
+            if (SubjectsInput.length < 3) {
+                System.out.println("최소 3개 이상 입력해주세요.");
+            } else {
+                for (int i = 0; i < SubjectsInput.length; i++) {
+                    subjectStore.add(new Subject(sequence(INDEX_TYPE_SUBJECT), SubjectsInput[i], SUBJECT_TYPE_MANDATORY));
+                }
+                break;
+            }
         }
 
-        String subjectString = sc.nextLine();
-        String[] SubjectsInput = subjectString.split(",");
+        // 선택 과목 2개 이상 입력
+        while (true) {
+            System.out.println("선택 과목 목록(최소 2개 이상)");
+            System.out.println("1. 디자인 패턴");
+            System.out.println("2. Spring Security");
+            System.out.println("3. Redis");
+            System.out.println("4. MongoDB");
+            System.out.println("선택 과목 입력 예시 -> 디자인 패턴 Spring Security");
+            System.out.print("선택 과목 입력: ");
+            String subjectString2 = sc.nextLine();
+            String[] SubjectsInput2 = subjectString2.split(" ");
+            String subjectString = sc.nextLine();
+            String[] SubjectsInput = subjectString.split(",");
 
-        for (int i = 0; i < SubjectsInput.length; i++) {
-            subjectStore.add(new Subject(sequence(INDEX_TYPE_SUBJECT), SubjectsInput[i], SUBJECT_TYPE_MANDATORY));
-        }
-
-        // 선택 과목 입력
-        System.out.println("선택 과목 목록(최소 2개 이상)");
-        System.out.println("1. 디자인 패턴");
-        System.out.println("2. Spring Security");
-        System.out.println("3. Redis");
-        System.out.println("4. MongoDB");
-        System.out.println("선택 과목 입력 예시 -> 디자인 패턴, Spring Security");
-        System.out.print("선택 과목 입력: ");
-        String subjectString2 = sc.nextLine();
-        String[] SubjectsInput2 = subjectString2.split(",");
-
-        for (int i = 0; i < SubjectsInput2.length; i++) {
-            subjectStore.add(new Subject(sequence(INDEX_TYPE_SUBJECT), SubjectsInput2[i], SUBJECT_TYPE_CHOICE));
+            if (SubjectsInput2.length < 2) {
+                System.out.println("최소 2개 이상 입력해주세요.");
+            } else {
+                for (int i = 0; i < SubjectsInput2.length; i++) {
+                    subjectStore.add(new Subject(sequence(INDEX_TYPE_SUBJECT), SubjectsInput2[i], SUBJECT_TYPE_CHOICE));
+                }
+                break;
+            }
         }
 
         for (int i = 0; i < subjectStore.size(); i++) {
@@ -236,7 +250,6 @@ public class CampManagementApplication {
             //일단 삭제 고려안함, idx 고려 배제
             Student student = studentStore.get(Integer.parseInt(findStudentId.get()) - 1);
             boolean flag = true;
-
 
 
             //학생의 필수과목 점수 기재공간
@@ -423,11 +436,35 @@ public class CampManagementApplication {
 
     // 수강생의 특정 과목 회차별 등급 조회
     private static void inquireRoundGradeBySubject() {
-        String studentId = getStudentId(); // 관리할 수강생 고유 번호
-        // 기능 구현 (조회할 특정 과목)
-        System.out.println("회차별 등급을 조회합니다...");
+        System.out.println("관리할 수강생의 이름을 입력해주세요!");
+        String studentName = sc.nextLine();
+        Student foundStudent = studentStore.stream()
+                .filter(stu -> stu.getStudentName().equalsIgnoreCase(studentName))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("학생 이름 " + studentName + "을 찾지 못했습니다."));
+        System.out.println("조회할 과목을 입력해주세요.");
+        String subjectName = sc.nextLine();
+
+
+        for (int i = 1; i <= 10; i++) {
+            Score score = foundStudent.getSubjectsMap(i).getSubject(subjectName);
+            int sc = score.getScore();
+
+            if(score.getSubject().getSubjectType().equals(SUBJECT_TYPE_MANDATORY)) {
+                MandatoryRankEnum Rank = MandatoryRankEnum.getRank(sc);
+                System.out.println((i)+ "회차의 등급은 " + Rank + "입니다.");
+
+            }
+            else
+            {
+                ChoiceRankEnum Rank = ChoiceRankEnum.getRank(sc);
+                System.out.println((i) + "회차의 등급은 " + Rank + "입니다.");
+
+            }
+        }
+
         // 기능 구현
         System.out.println("\n등급 조회 성공!");
-    }
 
+    }
 }
