@@ -11,6 +11,8 @@ public class Student {
     private List<Subject> subjects;
     private Map<Integer, Round> roundSubjectsMap;
 
+    private String studentState;
+
     public Student(String seq, String studentName, List<Subject> subjects) {
         this.studentId = seq;
         this.studentName = studentName;
@@ -25,6 +27,12 @@ public class Student {
     public String getStudentName() {
         return studentName;
     }
+
+    public void setStudentName(String studentName){
+        this.studentName = studentName;
+    }
+
+
 
     public Map<Integer, Round> getRoundSubjectsMap() {
         return roundSubjectsMap;
@@ -42,9 +50,21 @@ public class Student {
     public List<Subject> getSubjects() {
         return subjects;
     }
-
+    public void setSubjects(String seq, String subjectName, String subjectType ) {
+        Subject newSubject = new Subject(seq, subjectName, subjectType);
+        this.subjects.add(newSubject);
+    }
     @Override
     public String toString() {
-        return "Student{" + "studentId='" + studentId + '\'' + ", studentName='" + studentName + '\'' + ", subjects=" + subjects + ", roundSubjectsMap=" + roundSubjectsMap + '}';
+        return "Student{" + "studentId='" + this.studentId + '\'' + ", studentName='" + this.studentName + '\'' + ", subjects=" + this.subjects;
     }
+
+    public void setStudentState(String state){
+        this.studentState = state;
+    }
+
+    public String getStudentState(){
+        return this.studentState;
+    }
+
 }
