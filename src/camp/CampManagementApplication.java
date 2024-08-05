@@ -4,7 +4,6 @@ import camp.enums.ChoiceRankEnum;
 import camp.enums.MandatoryRankEnum;
 import camp.exceptions.*;
 import camp.model.*;
-
 import java.util.*;
 
 /**
@@ -419,6 +418,77 @@ public class CampManagementApplication {
 
         // 기능 구현
         System.out.println("\n등급 조회 성공!");
+    }
 
+    public static List<Student> getStudentStore() {
+        return studentStore;
+    }
+
+    public static void setStudentStore(List<Student> studentStore) {
+        CampManagementApplication.studentStore = studentStore;
+    }
+
+    public static List<Subject> getSubjectStore() {
+        return subjectStore;
+    }
+
+    public static void setSubjectStore(List<Subject> subjectStore) {
+        CampManagementApplication.subjectStore = subjectStore;
+    }
+
+    public static List<Score> getScoreStore() {
+        return scoreStore;
+    }
+
+    public static void setScoreStore(List<Score> scoreStore) {
+        CampManagementApplication.scoreStore = scoreStore;
+    }
+
+    public static String getSubjectTypeMandatory() {
+        return SUBJECT_TYPE_MANDATORY;
+    }
+
+    public static void setSubjectTypeMandatory(String subjectTypeMandatory) {
+        SUBJECT_TYPE_MANDATORY = subjectTypeMandatory;
+    }
+
+    public static String getSubjectTypeChoice() {
+        return SUBJECT_TYPE_CHOICE;
+    }
+
+    public static void setSubjectTypeChoice(String subjectTypeChoice) {
+        SUBJECT_TYPE_CHOICE = subjectTypeChoice;
+    }
+
+    public static int getStudentIndex() {
+        return studentIndex;
+    }
+
+    public static void setStudentIndex(int studentIndex) {
+        CampManagementApplication.studentIndex = studentIndex;
+    }
+
+    public static int getSubjectIndex() {
+        return subjectIndex;
+    }
+
+    public static void setSubjectIndex(int subjectIndex) {
+        CampManagementApplication.subjectIndex = subjectIndex;
+    }
+
+    public static int getScoreIndex() {
+        return scoreIndex;
+    }
+
+    public static void setScoreIndex(int scoreIndex) {
+        CampManagementApplication.scoreIndex = scoreIndex;
+    }
+
+    public static Scanner getSc() {
+        return sc;
+    }
+
+    public static void setSc(Scanner sc) {
+        CampManagementApplication.sc = sc;
     }
 }
