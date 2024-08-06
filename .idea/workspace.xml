@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="775693a9-61ad-4cd8-9acb-8de3e9704627" name="Changes" comment="eunhyeong">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camp-management-app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/camp/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +106,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="twenty_questions" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="twenty_questions" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.CampManagementApplication" />
@@ -117,6 +128,13 @@
         <item itemvalue="Application.CampManagementApplication" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
