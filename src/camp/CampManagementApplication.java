@@ -372,7 +372,7 @@ public class CampManagementApplication {
                 int input = sc.nextInt();
                 sc.nextLine();
                 //잘못된 번호를 골랐을때
-                if (input == 1);
+                if (input == 1) ;
                 else if (input == 2) return;
                 else throw new HandleMisMatchSelect();
 
@@ -390,8 +390,9 @@ public class CampManagementApplication {
                 for (Map.Entry<String, Score> subject : student.getSubjectsMap(roundNumber).getSubjects().entrySet()) {
                     subjectList.add(subject.getKey());
                     //점수 등록이 안됐다면
-                    if (subject.getValue().getScore() == -1) System.out.print(i + "." + subject.getKey() + " : " + "[점수미등록] ");
-                    //점수 등록이 됐다면
+                    if (subject.getValue().getScore() == -1)
+                        System.out.print(i + "." + subject.getKey() + " : " + "[점수미등록] ");
+                        //점수 등록이 됐다면
                     else System.out.print(i + "." + subject.getKey() + " : " + subject.getValue().getScore() + "점 ");
                     ++i;
                 }
@@ -413,12 +414,14 @@ public class CampManagementApplication {
                 if (!(score >= 0 && score <= 100)) throw new HandleMisMatchScore();
 
                 //이미 점수가 등록되어있다면
-                if (student.getSubjectsMap(roundNumber).getSubject(subject).getScore() != -1) throw new HandleDuplicateScore();
+                if (student.getSubjectsMap(roundNumber).getSubject(subject).getScore() != -1)
+                    throw new HandleDuplicateScore();
                 // n 회차에대한 과목,점수 저장
                 round.setSubject(student.getSubjectsMap(roundNumber).getSubject(subject), score);
                 //필수타입이면 MandatoryEnum 클래스로 랭크 계산
-                if (student.getSubjectsMap(roundNumber).getSubject(subject).getSubject().getSubjectType().equals(SUBJECT_TYPE_MANDATORY)) student.getSubjectsMap(roundNumber).getSubject(subject).setMandatoryRank(score);
-                //선택타입이면 ChoiceEnum 클래스로 랭크 계산
+                if (student.getSubjectsMap(roundNumber).getSubject(subject).getSubject().getSubjectType().equals(SUBJECT_TYPE_MANDATORY))
+                    student.getSubjectsMap(roundNumber).getSubject(subject).setMandatoryRank(score);
+                    //선택타입이면 ChoiceEnum 클래스로 랭크 계산
                 else student.getSubjectsMap(roundNumber).getSubject(subject).setChoiceRank(score);
                 System.out.println("등록이 정상적으로 마무리 되었습니다 !");
             } catch (InputMismatchException e) {
@@ -544,8 +547,7 @@ public class CampManagementApplication {
         System.out.println("\n등급 조회 성공!");
     }
 
-    private static void inquireAverageGradeBySubject()
-    {
+    private static void inquireAverageGradeBySubject() {
 
         System.out.println("관리할 수강생의 이름을 입력해주세요!");
         String studentName = sc.nextLine();
@@ -556,7 +558,6 @@ public class CampManagementApplication {
         System.out.println("수강생의 과목별 평균 등급을 조회합니다.");
 
 
-
         int sum = 0;
         int roundNumber = 1;
         int valid = 0;
@@ -565,9 +566,8 @@ public class CampManagementApplication {
             Subject subject = foundStudent.getSubjects().get(i);
             String subjectName = foundStudent.getSubjects().get(i).getSubjectName();
             System.out.println("과목명 : " + subjectName);
-            for(roundNumber = 1; roundNumber <= 10; roundNumber++)
-            {
-                if(foundStudent.getSubjectsMap(roundNumber).getSubject(subjectName).getScore() <= 0){
+            for (roundNumber = 1; roundNumber <= 10; roundNumber++) {
+                if (foundStudent.getSubjectsMap(roundNumber).getSubject(subjectName).getScore() <= 0) {
                     break;
                 }
 
@@ -575,22 +575,18 @@ public class CampManagementApplication {
                 sum += score.getScore();
                 valid++;
             }
-            if(valid > 0)
-            {
+            if (valid > 0) {
                 int average = sum / (roundNumber - 1);
-                if(subject.getSubjectType().equals(SUBJECT_TYPE_MANDATORY))
-                {   MandatoryRankEnum Rank = MandatoryRankEnum.getRank(average);
+                if (subject.getSubjectType().equals(SUBJECT_TYPE_MANDATORY)) {
+                    MandatoryRankEnum Rank = MandatoryRankEnum.getRank(average);
                     System.out.println("평균 등급 : " + Rank);
-                }
-                else
-                {
+                } else {
                     ChoiceRankEnum Rank = ChoiceRankEnum.getRank(average);
                     System.out.println("평균 등급 : " + Rank);
                 }
                 System.out.println("등급 조회 성공!");
                 System.out.println();
-            }
-            else{
+            } else {
                 System.out.println("등록된 점수가 없습니다.");
             }
 
@@ -598,3 +594,4 @@ public class CampManagementApplication {
 
 
     }
+}
