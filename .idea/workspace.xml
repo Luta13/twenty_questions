@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="- 김경민 코드 수정&#10;1. 각종 exception 처리 구현">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/CampManagementApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/enums/BasicStudentInquiry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/enums/ChoiceRankEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/enums/DetaileStudentInquiry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/enums/MandatoryRankEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/enums/StatusFilterStudentInquiry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/enums/StudentInquiry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/exceptions/HandleDuplicateScore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/exceptions/HandleMisMatchNotNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/exceptions/HandleMisMatchRound.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/exceptions/HandleMisMatchScore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/exceptions/HandleMisMatchSelect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/exceptions/HandleMisMatchStudent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/model/Round.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/model/Score.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/model/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/camp/model/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/enums/ChoiceRankEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/enums/MandatoryRankEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/exceptions/HandleDuplicateScore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/exceptions/HandleMisMatchNotNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/exceptions/HandleMisMatchRound.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/exceptions/HandleMisMatchScore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/exceptions/HandleMisMatchSelect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/exceptions/HandleMisMatchStudent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/model/Round.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/model/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/bin">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="kkm4512_test" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kkm4512&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Luta13/twenty_questions.git&quot;,
+    &quot;accountId&quot;: &quot;948590c3-4e13-4760-bf8c-8b5c24fe3179&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2k6A6NNNzbe3c7pZ3pJxyvvDwcB" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CampManagementApplication.executor": "Run",
+    "Application.Test.executor": "Run",
+    "Application.Util.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/nayou/OneDrive/Desktop/twenty_questions",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="camp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CampManagementApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="22" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="camp.CampManagementApplication" />
+      <module name="twenty_questions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="camp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="twenty_questions" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="twenty_questions" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CampManagementApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="" />
+      <created>1722593478591</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722593478591</updated>
+    </task>
+    <task id="LOCAL-00001" summary="1. createScore 메서드에서 불필요한 시스템아웃 프린트문 제거&#10;2.  166줄 subjectStore 메서드를 한번더 초기화 시켜주었습니다 (수강생 연속으로 2명 등록후, createScore 메서드 사용시 첫번째 사람의 필수과목 목록에 2번째 사람이 저장한 필수과목 목록까지 포함되어서)&#10;3. System out시 출력되는 프린트 문자열 몇몇 수정">
+      <option name="closed" value="true" />
+      <created>1722775401923</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722775401923</updated>
+    </task>
+    <task id="LOCAL-00002" summary="- 김경민 createScore 메서드 수정&#10;1. 기존 createScore 를 실행할때, 해당 학생의 default 과목,성적 세팅하는 부분을 createStudent 함수로 옮겼습니다&#10;사유: createScore에 넣어놨더니, 나가기하고 다시 들어오면 해당 학생의 성적이 초기화 되있었습니다">
+      <option name="closed" value="true" />
+      <created>1722777345787</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722777345787</updated>
+    </task>
+    <task id="LOCAL-00003" summary="- 김경민 코드 수정 &#10;1. createScore 메서드 인자값 삭제 -&gt; 함수 내부에서 인자값 받도록 수정&#10;2. 회차 입력시 1~10회차 가 아닐시, exception 처리&#10;3. 점수 입력시 0 ~ 100 이 아닐시, exception 처리&#10;4. 회차.점수에대한 exception 생성&#10;5. if (findStudentId.isPresent()) 제거 -&gt; exception 처리를 통해 제어해주고 있기떄문&#10;6. 각 메서드에 throws Exception 추가&#10;7. testFile 삭제">
+      <option name="closed" value="true" />
+      <created>1722836690743</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722836690743</updated>
+    </task>
+    <task id="LOCAL-00004" summary="- 김경민 코드 수정 &#10;1. createScore 메서드 인자값 삭제 -&gt; 함수 내부에서 인자값 받도록 수정&#10;2. 회차 입력시 1~10회차 가 아닐시, exception 처리&#10;3. 점수 입력시 0 ~ 100 이 아닐시, exception 처리&#10;4. 회차.점수에대한 exception 생성&#10;5. if (findStudentId.isPresent()) 제거 -&gt; exception 처리를 통해 제어해주고 있기떄문&#10;6. 각 메서드에 throws Exception 추가&#10;7. testFile 삭제&#10;8. 중복 코드 제거&#10;9. 필수과목,선택과목 합체">
+      <option name="closed" value="true" />
+      <created>1722842215556</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722842215556</updated>
+    </task>
+    <task id="LOCAL-00005" summary="- 김경민 코드 수정&#10;1. 각종 exception 처리 구현">
+      <option name="closed" value="true" />
+      <created>1722855550903</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722855550903</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1. createScore 메서드에서 불필요한 시스템아웃 프린트문 제거&#10;2.  166줄 subjectStore 메서드를 한번더 초기화 시켜주었습니다 (수강생 연속으로 2명 등록후, createScore 메서드 사용시 첫번째 사람의 필수과목 목록에 2번째 사람이 저장한 필수과목 목록까지 포함되어서)&#10;3. System out시 출력되는 프린트 문자열 몇몇 수정" />
+    <MESSAGE value="- 김경민 createScore 메서드 수정&#10;1. 기존 createScore 를 실행할때, 해당 학생의 default 과목,성적 세팅하는 부분을 createStudent 함수로 옮겼습니다&#10;사유: createScore에 넣어놨더니, 나가기하고 다시 들어오면 해당 학생의 성적이 초기화 되있었습니다" />
+    <MESSAGE value="- 김경민 코드 수정 &#10;1. createScore 메서드 인자값 삭제 -&gt; 함수 내부에서 인자값 받도록 수정&#10;2. 회차 입력시 1~10회차 가 아닐시, exception 처리&#10;3. 점수 입력시 0 ~ 100 이 아닐시, exception 처리&#10;4. 회차.점수에대한 exception 생성&#10;5. if (findStudentId.isPresent()) 제거 -&gt; exception 처리를 통해 제어해주고 있기떄문&#10;6. 각 메서드에 throws Exception 추가&#10;7. testFile 삭제" />
+    <MESSAGE value="- 김경민 코드 수정 &#10;1. createScore 메서드 인자값 삭제 -&gt; 함수 내부에서 인자값 받도록 수정&#10;2. 회차 입력시 1~10회차 가 아닐시, exception 처리&#10;3. 점수 입력시 0 ~ 100 이 아닐시, exception 처리&#10;4. 회차.점수에대한 exception 생성&#10;5. if (findStudentId.isPresent()) 제거 -&gt; exception 처리를 통해 제어해주고 있기떄문&#10;6. 각 메서드에 throws Exception 추가&#10;7. testFile 삭제&#10;8. 중복 코드 제거&#10;9. 필수과목,선택과목 합체" />
+    <MESSAGE value="- 김경민 코드 수정&#10;1. 각종 exception 처리 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="- 김경민 코드 수정&#10;1. 각종 exception 처리 구현" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((HashMap.Node)entry).getValue()" custom="java.util.HashMap.Node" />
+        <watch expression="((HashMap.Node)entry).getValue()" custom="java.util.HashMap.Node" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

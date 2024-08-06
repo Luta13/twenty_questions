@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29_[Changes]1" date="1722594550638" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 2024-08-02 PM 7:29 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/camp-management-app/camp/CampManagementApplication.class" />
+    <option name="AFTER_PATH" value="out/production/camp-management-app/camp/CampManagementApplication.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29_[Changes]1/CampManagementApplication.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/camp-management-app/camp/model/Student.class" />
+    <option name="AFTER_PATH" value="out/production/camp-management-app/camp/model/Student.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29_[Changes]1/Student.class" />
+  </binary>
+</changelist>

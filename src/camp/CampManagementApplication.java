@@ -31,7 +31,6 @@ public class CampManagementApplication {
     private static int scoreIndex = 0;
     private static final String INDEX_TYPE_SCORE = "SC";
 
-
     // 스캐너
     private static Scanner sc = new Scanner(System.in);
 
@@ -383,13 +382,10 @@ public class CampManagementApplication {
                 int i = 1;
                 for (Map.Entry<String, Score> subject : student.getSubjectsMap(roundNumber).getSubjects().entrySet()) {
                     subjectList.add(subject.getKey());
-                    if (subject.getValue().getScore() == -1) {
-                        //점수 등록이 안됐다면
-                        System.out.print(i + "." + subject.getKey() + " : " + "[점수미등록] ");
-                    }
+                    //점수 등록이 안됐다면
+                    if (subject.getValue().getScore() == -1) System.out.print(i + "." + subject.getKey() + " : " + "[점수미등록] ");
                     //점수 등록이 됐다면
-                    else
-                        System.out.print(i + "." + subject.getKey() + " : " + subject.getValue().getScore() + "점 ");
+                    else System.out.print(i + "." + subject.getKey() + " : " + subject.getValue().getScore() + "점 ");
                     ++i;
                 }
                 System.out.println();
