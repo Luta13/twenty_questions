@@ -5,10 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="- 김경민 코드 수정&#10;1. 각종 exception 처리 구현">
+      <change afterPath="$PROJECT_DIR$/camp-management-app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/camp-management-app1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_13__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_13__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_28__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_28__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_28__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_28__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29__Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29__Changes_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-05_PM_1_33__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-05_PM_1_33__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-05_PM_1_33__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-05_PM_1_33__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/twenty_questions1/camp/CampManagementApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/CampManagementApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/twenty_questions1/camp/model/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/model/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/CampManagementApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/enums/BasicStudentInquiry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/enums/DetaileStudentInquiry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/enums/StatusFilterStudentInquiry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/enums/StudentInquiry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/model/Score.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/model/Student.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +74,12 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Luta13/twenty_questions.git&quot;,
-    &quot;accountId&quot;: &quot;948590c3-4e13-4760-bf8c-8b5c24fe3179&quot;
+    &quot;accountId&quot;: &quot;6e1f99c6-5671-4fa3-99b5-0e35a56569b4&quot;
   }
 }</component>
+  <component name="MavenRunner">
+    <option name="jreName" value="zulu-17" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -67,26 +87,32 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CampManagementApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Util.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nayou/OneDrive/Desktop/twenty_questions&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CampManagementAppdlication.executor": "Run",
+    "Application.CampManagementApplication.executor": "Run",
+    "Application.Test.executor": "Run",
+    "Application.Util.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/user/Desktop/camp-management-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.runner",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -95,12 +121,25 @@
       <recent name="camp" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.CampManagementApplication">
+    <configuration name="CampManagementAppdlication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="camp.CampManagementAppdlication" />
+      <module name="camp-management-app1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="camp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CampManagementApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="22" />
+      <option name="ALTERNATIVE_JRE_PATH" value="zulu-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="camp.CampManagementApplication" />
-      <module name="twenty_questions1" />
+      <module name="camp-management-app1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="camp.*" />
@@ -124,11 +163,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.CampManagementAppdlication" />
+      <item itemvalue="Application.CampManagementApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.CampManagementApplication" />
+        <item itemvalue="Application.CampManagementAppdlication" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -138,6 +190,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1722593478591</updated>
+      <workItem from="1722929171295" duration="765000" />
+      <workItem from="1722929950821" duration="100000" />
     </task>
     <task id="LOCAL-00001" summary="1. createScore 메서드에서 불필요한 시스템아웃 프린트문 제거&#10;2.  166줄 subjectStore 메서드를 한번더 초기화 시켜주었습니다 (수강생 연속으로 2명 등록후, createScore 메서드 사용시 첫번째 사람의 필수과목 목록에 2번째 사람이 저장한 필수과목 목록까지 포함되어서)&#10;3. System out시 출력되는 프린트 문자열 몇몇 수정">
       <option name="closed" value="true" />
@@ -182,6 +236,9 @@
     <option name="localTasksCounter" value="6" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1. createScore 메서드에서 불필요한 시스템아웃 프린트문 제거&#10;2.  166줄 subjectStore 메서드를 한번더 초기화 시켜주었습니다 (수강생 연속으로 2명 등록후, createScore 메서드 사용시 첫번째 사람의 필수과목 목록에 2번째 사람이 저장한 필수과목 목록까지 포함되어서)&#10;3. System out시 출력되는 프린트 문자열 몇몇 수정" />
     <MESSAGE value="- 김경민 createScore 메서드 수정&#10;1. 기존 createScore 를 실행할때, 해당 학생의 default 과목,성적 세팅하는 부분을 createStudent 함수로 옮겼습니다&#10;사유: createScore에 넣어놨더니, 나가기하고 다시 들어오면 해당 학생의 성적이 초기화 되있었습니다" />
@@ -197,5 +254,9 @@
         <watch expression="((HashMap.Node)entry).getValue()" custom="java.util.HashMap.Node" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
