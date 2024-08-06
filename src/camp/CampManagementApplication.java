@@ -4,6 +4,7 @@ import camp.enums.ChoiceRankEnum;
 import camp.enums.MandatoryRankEnum;
 import camp.exceptions.*;
 import camp.model.*;
+
 import java.util.*;
 
 /**
@@ -551,10 +552,7 @@ public class CampManagementApplication {
 
         System.out.println("관리할 수강생의 이름을 입력해주세요!");
         String studentName = sc.nextLine();
-        Student foundStudent = studentStore.stream()
-                .filter(stu -> stu.getStudentName().equalsIgnoreCase(studentName))
-                .findFirst()
-                .orElseThrow(() -> new RuntimeException("학생 이름 " + studentName + "을 찾지 못했습니다."));
+        Student foundStudent = studentStore.stream().filter(stu -> stu.getStudentName().equalsIgnoreCase(studentName)).findFirst().orElseThrow(() -> new RuntimeException("학생 이름 " + studentName + "을 찾지 못했습니다."));
         System.out.println("수강생의 과목별 평균 등급을 조회합니다.");
 
 
