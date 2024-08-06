@@ -4,170 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="- 김경민 코드 수정&#10;1. 각종 exception 처리 구현">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_13_[Changes]/CampManagementApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_13_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_13__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_28_[Changes]/CampManagementApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_28_[Changes]/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_28_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_28_[Changes]1/CampManagementApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_28_[Changes]1/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_28_[Changes]1/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_28__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_28__Changes_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29_[Changes]/CampManagementApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29_[Changes]/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29_[Changes]1/CampManagementApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29_[Changes]1/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29_[Changes]1/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29_[Changes]2/CampManagementApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29_[Changes]2/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29_[Changes]2/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29__Changes_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-02_PM_7_29__Changes_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-05_PM_1_33_[Changes]/CampManagementApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-05_PM_1_33_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-05_PM_1_33_[Changes]1/CampManagementApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-05_PM_1_33_[Changes]1/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-05_PM_1_33__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-08-05_PM_1_33__Changes_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/twenty_questions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/camp-management-app1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app/out/production/twenty_questions/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app/out/production/twenty_questions/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app/out/production/twenty_questions/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app/out/production/twenty_questions/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app/out/production/twenty_questions/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app/out/production/twenty_questions/twenty_questions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app/twenty_questions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/CampManagementApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/enums/BasicStudentInquiry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/enums/DetaileStudentInquiry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/enums/StatusFilterStudentInquiry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/enums/StudentInquiry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/exceptions/HandleDuplicateScore.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/exceptions/HandleMisMatchNotNumber.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/exceptions/HandleMisMatchRound.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/exceptions/HandleMisMatchScore.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/exceptions/HandleMisMatchSelect.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/exceptions/HandleMisMatchStudent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/model/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/out/production/twenty_questions/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/out/production/twenty_questions/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/out/production/twenty_questions/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/out/production/twenty_questions/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/out/production/twenty_questions/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/out/production/twenty_questions/twenty_questions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/camp-management-app1/twenty_questions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/CampManagementApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/enums/BasicStudentInquiry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/enums/ChoiceRankEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/enums/DetaileStudentInquiry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/enums/MandatoryRankEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/enums/StatusFilterStudentInquiry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/enums/StudentInquiry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/exceptions/HandleDuplicateScore.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/exceptions/HandleMisMatchNotNumber.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/exceptions/HandleMisMatchRound.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/exceptions/HandleMisMatchScore.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/exceptions/HandleMisMatchSelect.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/exceptions/HandleMisMatchStudent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/model/Round.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/model/Score.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/model/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/model/Subject.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/out/production/twenty_questions/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/out/production/twenty_questions/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/out/production/twenty_questions/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/out/production/twenty_questions/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/out/production/twenty_questions/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/out/production/twenty_questions/twenty_questions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/twenty_questions1/twenty_questions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/camp/enums/BasicStudentInquiry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/camp/enums/DetaileStudentInquiry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/camp/enums/StatusFilterStudentInquiry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/camp/enums/StudentInquiry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/camp/exceptions/HandleDuplicateScore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/camp/exceptions/HandleMisMatchNotNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/camp/exceptions/HandleMisMatchRound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/camp/exceptions/HandleMisMatchScore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/camp/exceptions/HandleMisMatchSelect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/camp/exceptions/HandleMisMatchStudent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/CampManagementApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/enums/BasicStudentInquiry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/enums/ChoiceRankEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/enums/DetaileStudentInquiry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/enums/MandatoryRankEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/enums/StatusFilterStudentInquiry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/enums/StudentInquiry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/exceptions/HandleDuplicateScore.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/exceptions/HandleMisMatchNotNumber.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/exceptions/HandleMisMatchRound.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/exceptions/HandleMisMatchScore.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/exceptions/HandleMisMatchSelect.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/exceptions/HandleMisMatchStudent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/model/Round.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/model/Score.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/model/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/camp/model/Subject.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/twenty_questions/twenty_questions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/twenty_questions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/twenty_questions1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camp-management-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/camp-management-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/StudentControl/Stu_Inquiry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/StudentControl/Stu_Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/CampManagementApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camp-management-app/camp/CampManagementApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/enums/ChoiceRankEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/enums/ChoiceRankEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/enums/MandatoryRankEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/enums/MandatoryRankEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/model/Round.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/model/Round.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/model/Score.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/model/Score.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/model/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app/camp/model/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/model/Subject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/camp/model/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/model/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/camp/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/model/Student.java" afterDir="false" />
-    </list>
+    <list default="true" id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="- 김경민 코드 수정&#10;1. 각종 exception 처리 구현" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,32 +65,32 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CampManagementAppdlication.executor": "Run",
-    "Application.CampManagementApplication.executor": "Run",
-    "Application.Test.executor": "Run",
-    "Application.Util.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "git-widget-placeholder": "#2 on Merging minjun",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/user/Desktop/camp-management-app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.runner",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CampManagementAppdlication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CampManagementApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Util.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/camp-management-app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
