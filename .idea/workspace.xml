@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="- 김경민 코드 수정&#10;1. 각종 exception 처리 구현">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/twenty_questions1/camp/CampManagementApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/CampManagementApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/twenty_questions1/camp/model/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/twenty_questions1/camp/model/Student.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
