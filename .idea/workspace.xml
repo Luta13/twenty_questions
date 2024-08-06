@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="- 김경민 코드 수정&#10;1. 각종 exception 처리 구현">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app1/camp/CampManagementApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/CampManagementApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" afterDir="false" />
-    </list>
+    <list default="true" id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="- 김경민 코드 수정&#10;1. 각종 exception 처리 구현" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="kkm4512_test" />
+        <entry key="$PROJECT_DIR$" value="minjun" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,7 +79,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
-    "git-widget-placeholder": "minjun",
+    "git-widget-placeholder": "minjun1",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/user/Desktop/camp-management-app",
@@ -223,6 +219,29 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1. createScore 메서드에서 불필요한 시스템아웃 프린트문 제거&#10;2.  166줄 subjectStore 메서드를 한번더 초기화 시켜주었습니다 (수강생 연속으로 2명 등록후, createScore 메서드 사용시 첫번째 사람의 필수과목 목록에 2번째 사람이 저장한 필수과목 목록까지 포함되어서)&#10;3. System out시 출력되는 프린트 문자열 몇몇 수정" />
