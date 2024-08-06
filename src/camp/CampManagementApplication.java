@@ -307,7 +307,6 @@ public class CampManagementApplication {
                 break;
         }
 
-        System.out.println(student.toString());
         System.out.println("수강생 등록 완료!");
 
     }
