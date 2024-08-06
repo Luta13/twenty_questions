@@ -1,0 +1,88 @@
+Index: src/camp/model/Student.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package camp.model;\r\n\r\nimport java.util.HashMap;\r\nimport java.util.List;\r\nimport java.util.Map;\r\n\r\npublic class Student {\r\n\r\n    private String studentId;\r\n    private String studentName;\r\n    private List<Subject> subjects;\r\n    private Map<Integer, Round> roundSubjectsMap;\r\n\r\n    public Student(String seq, String studentName, List<Subject> subjects) {\r\n        this.studentId = seq;\r\n        this.studentName = studentName;\r\n        this.subjects = subjects;\r\n        this.roundSubjectsMap = new HashMap<>();\r\n    }\r\n\r\n    public String getStudentId() {\r\n        return studentId;\r\n    }\r\n\r\n    public String getStudentName() {\r\n        return studentName;\r\n    }\r\n\r\n    public Map<Integer, Round> getRoundSubjectsMap() {\r\n        return roundSubjectsMap;\r\n    }\r\n\r\n    public void addRoundSubjectsMap(Round round) {\r\n        roundSubjectsMap.put(round.getRoundNumber(), round);\r\n    }\r\n\r\n    // 회차에 알맞은, Round 객체 얻기\r\n    public Round getSubjectsMap(int roundNumber) {\r\n        return roundSubjectsMap.get(roundNumber);\r\n    }\r\n\r\n    public List<Subject> getSubjects() {\r\n        return subjects;\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"Student{\" + \"studentId='\" + studentId + '\\'' + \", studentName='\" + studentName + '\\'' + \", subjects=\" + subjects + \", roundSubjectsMap=\" + roundSubjectsMap + '}';\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/camp/model/Student.java b/src/camp/model/Student.java
+--- a/src/camp/model/Student.java	
++++ b/src/camp/model/Student.java	
+@@ -16,6 +16,7 @@
+         this.studentName = studentName;
+         this.subjects = subjects;
+         this.roundSubjectsMap = new HashMap<>();
++
+     }
+ 
+     public String getStudentId() {
+Index: src/camp/exceptions/HandleMisMatchScore.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/camp/exceptions/HandleMisMatchScore.java b/src/camp/exceptions/HandleMisMatchScore.java
+new file mode 100644
+--- /dev/null	
++++ b/src/camp/exceptions/HandleMisMatchScore.java	
+@@ -0,0 +1,7 @@
++package camp.exceptions;
++
++public class HandleMisMatchScore extends Exception{
++    public HandleMisMatchScore(){
++        super("점수는 0 ~ 100 숫자만 입력 가능합니다 !");
++    }
++}
+Index: src/camp/exceptions/HandleMisMatchSelect.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/camp/exceptions/HandleMisMatchSelect.java b/src/camp/exceptions/HandleMisMatchSelect.java
+new file mode 100644
+--- /dev/null	
++++ b/src/camp/exceptions/HandleMisMatchSelect.java	
+@@ -0,0 +1,7 @@
++package camp.exceptions;
++
++public class HandleMisMatchSelect extends Exception{
++    public HandleMisMatchSelect(){
++        super("보기중에 알맞은 선택지를 골라주세요 !");
++    }
++}
+Index: src/camp/exceptions/HandleMisMatchRound.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/camp/exceptions/HandleMisMatchRound.java b/src/camp/exceptions/HandleMisMatchRound.java
+new file mode 100644
+--- /dev/null	
++++ b/src/camp/exceptions/HandleMisMatchRound.java	
+@@ -0,0 +1,8 @@
++package camp.exceptions;
++
++//잘못된 회차를 기재 하였을경우
++public class HandleMisMatchRound extends Exception{
++    public HandleMisMatchRound(){
++        super("회차는 1 ~ 10 숫자만 입력 가능합니다");
++    }
++}
+Index: src/camp/exceptions/HandleMisMatchStudent.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/camp/exceptions/HandleMisMatchStudent.java b/src/camp/exceptions/HandleMisMatchStudent.java
+new file mode 100644
+--- /dev/null	
++++ b/src/camp/exceptions/HandleMisMatchStudent.java	
+@@ -0,0 +1,8 @@
++package camp.exceptions;
++
++//잘못된 학생의 정보를 기재하였을 경우
++public class HandleMisMatchStudent extends Exception{
++    public HandleMisMatchStudent(){
++        super("학생의 정보가 일치하지 않습니다 !");
++    }
++}
