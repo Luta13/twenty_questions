@@ -480,42 +480,48 @@ public class CampManagementApplication {
                 .findFirst()
                 .orElseThrow(() -> new RuntimeException("학생 이름 " + studentName + "을 찾지 못했습니다."));
         System.out.println("수강생의 과목별 평균 등급을 조회합니다.");
-        System.out.println(foundStudent.getSubjects().size());
+
 
 
         int sum = 0;
         int roundNumber = 1;
-        Score score = foundStudent.getSubjectsMap(roundNumber).getSubject("Java");
-
+        int valid = 0;
         for (int i = 0; i < foundStudent.getSubjects().size(); i++) {
 
+            Subject subject = foundStudent.getSubjects().get(i);
             String subjectName = foundStudent.getSubjects().get(i).getSubjectName();
             System.out.println("과목명 : " + subjectName);
-            for(int j = 1; j <= 10; j++)
+            for(roundNumber = 1; roundNumber <= 10; roundNumber++)
             {
-                    if(foundStudent.getSubjectsMap(roundNumber).getSubject(subjectName).getScore() == -1){
+                    if(foundStudent.getSubjectsMap(roundNumber).getSubject(subjectName).getScore() <= 0){
                         break;
                     }
 
-                    score = foundStudent.getSubjectsMap(roundNumber).getSubject(subjectName);
+                    Score score = foundStudent.getSubjectsMap(roundNumber).getSubject(subjectName);
                     sum += score.getScore();
-                    roundNumber++;
-                System.out.println("sum 확인");
+                    valid++;
             }
-            Subject subject = foundStudent.getSubjects().get(i);
-            int average = sum / (roundNumber - 1);
-
-            if(subject.getSubjectType().equals(SUBJECT_TYPE_MANDATORY))
-            {   MandatoryRankEnum Rank = MandatoryRankEnum.getRank(average);
-                System.out.println("평균 등급 : " + Rank);
-            }
-            else
+            if(valid > 0)
             {
-                ChoiceRankEnum Rank = ChoiceRankEnum.getRank(average);
-                System.out.println("평균 등급 : " + Rank);
+                int average = sum / (roundNumber - 1);
+                if(subject.getSubjectType().equals(SUBJECT_TYPE_MANDATORY))
+                {   MandatoryRankEnum Rank = MandatoryRankEnum.getRank(average);
+                    System.out.println("평균 등급 : " + Rank);
+                }
+                else
+                {
+                    ChoiceRankEnum Rank = ChoiceRankEnum.getRank(average);
+                    System.out.println("평균 등급 : " + Rank);
+                }
+                System.out.println("등급 조회 성공!");
+                System.out.println();
             }
+            else{
+                System.out.println("등록된 점수가 없습니다.");
+            }
+
         }
-        System.out.println("\n등급 조회 성공!");
+
 
     }
 
