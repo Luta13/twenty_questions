@@ -110,7 +110,7 @@ public class CampManagementApplication {
                 case 2 -> inquireStudent(); // 수강생 목록 조회
                 case 3 -> correctionStudent(); // 수강생 수정
                 case 4 -> deleteStudent(); // 수강생 삭제
-                case 5 -> flag = false; // 메인 화면 이동
+                case 5 -> flag = false; // 메인 화면 이동gi
                 default -> {
                     System.out.println("잘못된 입력입니다.\n메인 화면 이동...");
                     flag = false;
