@@ -97,7 +97,8 @@ public class CampManagementApplication {
             System.out.println("1. 수강생 등록");
             System.out.println("2. 수강생 목록 조회");
             System.out.println("3. 수강생 수정");
-            System.out.println("4. 메인 화면 이동");
+            System.out.println("4. 수강생 삭제");
+            System.out.println("5. 메인 화면 이동");
             System.out.print("관리 항목을 선택하세요: ");
             int input = sc.nextInt();
 
@@ -105,7 +106,8 @@ public class CampManagementApplication {
                 case 1 -> createStudent(); // 수강생 등록
                 case 2 -> inquireStudent(); // 수강생 목록 조회
                 case 3 -> correctionStudent(); // 수강생 수정
-                case 4 -> flag = false; // 메인 화면 이동
+                case 4 -> deleteStudent(); // 수강생 삭제
+                case 5 -> flag = false; // 메인 화면 이동
                 default -> {
                     System.out.println("잘못된 입력입니다.\n메인 화면 이동...");
                     flag = false;
@@ -114,6 +116,10 @@ public class CampManagementApplication {
         }
     }
 
+
+    private static void deleteStudent(){
+
+    }
     // 수강생 수정
     private static void correctionStudent() {
         System.out.println("\n수강생을 수정합니다...");
