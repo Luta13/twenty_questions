@@ -4,7 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="- 김경민 코드 수정&#10;1. 각종 exception 처리 구현" />
+    <list default="true" id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="- 김경민 코드 수정&#10;1. 각종 exception 처리 구현">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions/out/production/twenty_questions/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions/out/production/twenty_questions/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions/out/production/twenty_questions/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions/out/production/twenty_questions/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions/out/production/twenty_questions/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions/out/production/twenty_questions/twenty_questions.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions/twenty_questions.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions1/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions1/out/production/twenty_questions/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions1/out/production/twenty_questions/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions1/out/production/twenty_questions/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions1/out/production/twenty_questions/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions1/out/production/twenty_questions/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions1/out/production/twenty_questions/twenty_questions.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/twenty_questions1/twenty_questions.iml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +96,7 @@
     &quot;Application.Test.executor&quot;: &quot;Run&quot;,
     &quot;Application.Util.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
@@ -94,7 +123,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="22" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="camp.CampManagementApplication" />
-      <module name="twenty_questions" />
+      <module name="twenty_questions1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="camp.*" />
