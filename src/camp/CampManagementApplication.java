@@ -282,7 +282,15 @@ public class CampManagementApplication {
                     System.out.println("유효한 과목만 입력해주세요. 다시 시도하세요.");
                 }
             }
-
+            //        현재 학생의 모든 회차에 대한 (과목 및 시험점수등) 디폴트값 적용 시키기
+            for (int i = 1; i <= 10; i++) {
+                Round round = new Round(i);
+                for (Subject subject : student.getSubjects()) {
+                    round.addSubject(subject);
+                }
+                student.addRoundSubjectsMap(round);
+            }
+            subjectStore = new ArrayList<>();
         }
 
         System.out.println("수강생 상태");
