@@ -560,7 +560,6 @@ public class CampManagementApplication {
         int roundNumber = 1;
         int valid = 0;
         for (int i = 0; i < foundStudent.getSubjects().size(); i++) {
-
             Subject subject = foundStudent.getSubjects().get(i);
             String subjectName = foundStudent.getSubjects().get(i).getSubjectName();
             System.out.println("과목명 : " + subjectName);
