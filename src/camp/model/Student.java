@@ -1,5 +1,6 @@
 package camp.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,10 +14,10 @@ public class Student {
 
     private String studentState;
 
-    public Student(String seq, String studentName, List<Subject> subjects) {
+    public Student(String seq, String studentName) {
         this.studentId = seq;
         this.studentName = studentName;
-        this.subjects = subjects;
+        this.subjects = new ArrayList<>();
         this.roundSubjectsMap = new HashMap<>();
 
     }
@@ -57,6 +58,7 @@ public class Student {
     public void setSubjects(String seq, String subjectName, String subjectType ) {
         Subject newSubject = new Subject(seq, subjectName, subjectType);
         this.subjects.add(newSubject);
+
     }
 
     @Override

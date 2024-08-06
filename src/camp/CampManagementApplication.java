@@ -17,7 +17,6 @@ import java.util.*;
 public class CampManagementApplication {
     // 데이터 저장소
     private static List<Student> studentStore;
-    private static List<Subject> subjectStore;
 
     // 과목 타입
     public static String SUBJECT_TYPE_MANDATORY = "MANDATORY";
@@ -46,7 +45,6 @@ public class CampManagementApplication {
     // 초기 데이터 생성
     private static void setInitData() {
         studentStore = new ArrayList<>();
-        subjectStore = new ArrayList<>();
     }
 
     // index 자동 증가
@@ -203,8 +201,12 @@ public class CampManagementApplication {
         // 수강생 입력
         System.out.print("수강생 이름 입력: ");
         String studentName = sc.next();
-        Student student = new Student(sequence(INDEX_TYPE_STUDENT), studentName, new ArrayList<>());
+        Student student = new Student(sequence(INDEX_TYPE_STUDENT), studentName);
         studentStore.add(student);
+
+        for ( int i=0; i<10; i++ ) {
+            
+        }
 
         // 기능 구현 (필수 과목, 선택 과목)
         subjectIndex = 0;
@@ -282,15 +284,6 @@ public class CampManagementApplication {
                     System.out.println("유효한 과목만 입력해주세요. 다시 시도하세요.");
                 }
             }
-            //        현재 학생의 모든 회차에 대한 (과목 및 시험점수등) 디폴트값 적용 시키기
-            for (int i = 1; i <= 10; i++) {
-                Round round = new Round(i);
-                for (Subject subject : student.getSubjects()) {
-                    round.addSubject(subject);
-                }
-                student.addRoundSubjectsMap(round);
-            }
-            subjectStore = new ArrayList<>();
         }
 
         System.out.println("수강생 상태");
@@ -371,7 +364,6 @@ public class CampManagementApplication {
                 System.out.println("'" + student.getStudentName() + "'의 점수를 등록할 선택지 입니다. //번호를 입력해주세요!");
                 System.out.println("1. 점수등록 2. 나가기");
                 int input = sc.nextInt();
-                sc.nextLine();
                 //잘못된 번호를 골랐을때
                 if (input == 1);
                 else if (input == 2) return;
@@ -382,7 +374,6 @@ public class CampManagementApplication {
 
                 System.out.println("'몇 회차' 과목의 점수를 등록 하시겠습니까? //번호를 입력해 주세요 !");
                 int roundNumber = sc.nextInt();
-                sc.nextLine();
                 // 1 ~ 10 사이의 숫자가 아닌회차의 경우 exception 처리
                 if (!(roundNumber >= 1 && roundNumber <= 10)) throw new HandleMisMatchRound();
                 System.out.println("현재 " + student.getStudentName() + " 학생의 " + roundNumber + "회차 필수,선택 과목 점수 등록 현황 상태입니다.");
@@ -401,7 +392,6 @@ public class CampManagementApplication {
                 System.out.println(roundNumber + "회차의 어떤 '과목'의 점수를 등록 하시겠습니까? //번호를 입력해주세요!");
                 //등록할 과목의 index
                 int subjectNumber = sc.nextInt();
-                sc.nextLine();
                 // 1 ~ 필수과목의 size 이외의 숫자라면 exception 처리
                 if (!(subjectNumber >= 1 && subjectNumber <= subjectList.size())) throw new HandleMisMatchSelect();
                 // subjectList 에서 사용자가 고른 idx 의 글자를 가져옴
@@ -409,7 +399,6 @@ public class CampManagementApplication {
 
                 System.out.println(roundNumber + "회차의 " + subject + " 과목에 대해 '점수'를 등록 해주세요");
                 int score = sc.nextInt();
-                sc.nextLine();
                 // 0 ~ 100 숫자가 아니라면 exception 처리
                 if (!(score >= 0 && score <= 100)) throw new HandleMisMatchScore();
 
