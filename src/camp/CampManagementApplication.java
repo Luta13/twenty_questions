@@ -100,7 +100,8 @@ public class CampManagementApplication {
             System.out.println("1. 수강생 등록");
             System.out.println("2. 수강생 목록 조회");
             System.out.println("3. 수강생 수정");
-            System.out.println("4. 메인 화면 이동");
+            System.out.println("4. 수강생 삭제");
+            System.out.println("5. 메인 화면 이동");
             System.out.print("관리 항목을 선택하세요: ");
             int input = sc.nextInt();
 
@@ -108,13 +109,43 @@ public class CampManagementApplication {
                 case 1 -> createStudent(); // 수강생 등록
                 case 2 -> inquireStudent(); // 수강생 목록 조회
                 case 3 -> correctionStudent(); // 수강생 수정
-                case 4 -> flag = false; // 메인 화면 이동
+                case 4 -> deleteStudent(); // 수강생 삭제
+                case 5 -> flag = false; // 메인 화면 이동
                 default -> {
                     System.out.println("잘못된 입력입니다.\n메인 화면 이동...");
                     flag = false;
                 }
             }
         }
+    }
+
+    private static void deleteStudent(){
+        System.out.println("\n수강생을 삭제합니다...");
+        String studentName;
+        while (true) {
+            System.out.print("수강생 이름 입력: ");
+            studentName = sc.next();
+
+            boolean found = false;
+
+            for (int i = 0; i < studentStore.size(); i++) {
+                Student student = studentStore.get(i);
+                if (student.getStudentName().equals(studentName)) {
+                    found = true;
+                    studentStore.remove(i);
+                    System.out.println(studentName + "을(를) 삭제했습니다.");
+                    break;
+                }
+            }
+
+            if (!found) {
+                System.out.println(studentName + "이(가) 존재하지 않습니다.");
+            } else {
+                break;
+            }
+        }
+
+
     }
 
     // 수강생 수정
@@ -202,6 +233,7 @@ public class CampManagementApplication {
         System.out.println("\n수강생을 등록합니다...");
 
         // 수강생 입력
+
         System.out.print("수강생 이름 입력: ");
         String studentName = sc.next();
         Student student = new Student(sequence(INDEX_TYPE_STUDENT), studentName, new ArrayList<>());
@@ -239,8 +271,8 @@ public class CampManagementApplication {
                 }
 
                 if (allValid) {
-                    for (int i = 0; i < SubjectsInput.length; i++) {
-                        student.setSubjects(sequence(INDEX_TYPE_SUBJECT), SubjectsInput[i], SUBJECT_TYPE_MANDATORY);
+                    for (String s : SubjectsInput) {
+                        student.setSubjects(sequence(INDEX_TYPE_SUBJECT), s, SUBJECT_TYPE_MANDATORY);
                     }
                     break; // Exit the loop after successful input
                 } else {
@@ -275,8 +307,8 @@ public class CampManagementApplication {
                 }
 
                 if (allValid) {
-                    for (int i = 0; i < SubjectsInput2.length; i++) {
-                        student.setSubjects(sequence(INDEX_TYPE_SUBJECT), SubjectsInput2[i], SUBJECT_TYPE_CHOICE);
+                    for (String s : SubjectsInput2) {
+                        student.setSubjects(sequence(INDEX_TYPE_SUBJECT), s, SUBJECT_TYPE_CHOICE);
                     }
                     break; // Exit the loop after successful input
                 } else {
@@ -317,12 +349,11 @@ public class CampManagementApplication {
             System.out.println("등록된 수강생이 없습니다.");
         } else {
             for (Student stu_inquiry : studentStore) {
-                System.out.println(stu_inquiry.getStudentId() + " - " + stu_inquiry.getStudentName());
+                System.out.println(stu_inquiry.toString());
             }
         }
         System.out.println("\n수강생 목록 조회 성공!");
     }
-
     private static void displayScoreView() {
         boolean flag = true;
         while (flag) {

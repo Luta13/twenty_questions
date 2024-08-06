@@ -18,11 +18,13 @@ public class Student {
         this.studentName = studentName;
         this.subjects = subjects;
         this.roundSubjectsMap = new HashMap<>();
-
     }
 
     public String getStudentId() {
         return studentId;
+    }
+    public void setStudentId(String studentId){
+        this.studentId = studentId;
     }
 
     public String getStudentName() {
