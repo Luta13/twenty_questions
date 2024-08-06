@@ -44,8 +44,14 @@ public class Student {
         return subjects;
     }
 
+    public String getStudentStatus() {
+        return null;
+    }
+
     @Override
     public String toString() {
         return "Student{" + "studentId='" + studentId + '\'' + ", studentName='" + studentName + '\'' + ", subjects=" + subjects + ", roundSubjectsMap=" + roundSubjectsMap + '}';
     }
+
+
 }
