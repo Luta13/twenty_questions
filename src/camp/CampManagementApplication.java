@@ -210,7 +210,8 @@ public class CampManagementApplication {
             System.out.println("1. 수강생의 과목별 시험 회차 및 점수 등록");
             System.out.println("2. 수강생의 과목별 회차 점수 수정");
             System.out.println("3. 수강생의 특정 과목 회차별 등급 조회");
-            System.out.println("4. 메인 화면 이동");
+            System.out.println("4. 수강생의 과목별 평균 등급 조회");
+            System.out.println("5. 메인 화면 이동");
             System.out.print("관리 항목을 선택하세요...");
             int input = sc.nextInt();
             sc.nextLine();
@@ -224,7 +225,8 @@ public class CampManagementApplication {
                 }
                 case 2 -> updateRoundScoreBySubject(); // 수강생의 과목별 회차 점수 수정
                 case 3 -> inquireRoundGradeBySubject(); // 수강생의 특정 과목 회차별 등급 조회
-                case 4 -> flag = false; // 메인 화면 이동
+                case 4 -> inquireAverageGradeBySubject();
+                case 5 -> flag = false; // 메인 화면 이동
                 default -> {
                     System.out.println("잘못된 입력입니다.\n메인 화면 이동...");
                     flag = false;
@@ -361,7 +363,7 @@ public class CampManagementApplication {
 
         // 해당 수강생이 존재하지 않는다면
         if (student == null) {
-            System.out.println("해당 이름을 가진 수강생이 존재하지 않습니다. 점수 관리 화면으로 재이동합니다.");
+            System.out.println("해당 이름을 가진 수강생이 존재하지 않습니다. 점수 관  리 화면으로 재이동합니다.");
             return;
         }
 
@@ -467,4 +469,54 @@ public class CampManagementApplication {
         System.out.println("\n등급 조회 성공!");
 
     }
+
+    private static void inquireAverageGradeBySubject()
+    {
+
+        System.out.println("관리할 수강생의 이름을 입력해주세요!");
+        String studentName = sc.nextLine();
+        Student foundStudent = studentStore.stream()
+                .filter(stu -> stu.getStudentName().equalsIgnoreCase(studentName))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("학생 이름 " + studentName + "을 찾지 못했습니다."));
+        System.out.println("수강생의 과목별 평균 등급을 조회합니다.");
+        System.out.println(foundStudent.getSubjects().size());
+
+
+        int sum = 0;
+        int roundNumber = 1;
+        Score score = foundStudent.getSubjectsMap(roundNumber).getSubject("Java");
+
+        for (int i = 0; i < foundStudent.getSubjects().size(); i++) {
+
+            String subjectName = foundStudent.getSubjects().get(i).getSubjectName();
+            System.out.println("과목명 : " + subjectName);
+            for(int j = 1; j <= 10; j++)
+            {
+                    if(foundStudent.getSubjectsMap(roundNumber).getSubject(subjectName).getScore() == -1){
+                        break;
+                    }
+
+                    score = foundStudent.getSubjectsMap(roundNumber).getSubject(subjectName);
+                    sum += score.getScore();
+                    roundNumber++;
+                System.out.println("sum 확인");
+            }
+            Subject subject = foundStudent.getSubjects().get(i);
+            int average = sum / (roundNumber - 1);
+
+            if(subject.getSubjectType().equals(SUBJECT_TYPE_MANDATORY))
+            {   MandatoryRankEnum Rank = MandatoryRankEnum.getRank(average);
+                System.out.println("평균 등급 : " + Rank);
+            }
+            else
+            {
+                ChoiceRankEnum Rank = ChoiceRankEnum.getRank(average);
+                System.out.println("평균 등급 : " + Rank);
+            }
+        }
+        System.out.println("\n등급 조회 성공!");
+
+    }
+
 }
