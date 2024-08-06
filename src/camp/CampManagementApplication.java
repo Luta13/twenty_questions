@@ -543,4 +543,58 @@ public class CampManagementApplication {
         // 기능 구현
         System.out.println("\n등급 조회 성공!");
     }
-}
+
+    private static void inquireAverageGradeBySubject()
+    {
+
+        System.out.println("관리할 수강생의 이름을 입력해주세요!");
+        String studentName = sc.nextLine();
+        Student foundStudent = studentStore.stream()
+                .filter(stu -> stu.getStudentName().equalsIgnoreCase(studentName))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("학생 이름 " + studentName + "을 찾지 못했습니다."));
+        System.out.println("수강생의 과목별 평균 등급을 조회합니다.");
+
+
+
+        int sum = 0;
+        int roundNumber = 1;
+        int valid = 0;
+        for (int i = 0; i < foundStudent.getSubjects().size(); i++) {
+
+            Subject subject = foundStudent.getSubjects().get(i);
+            String subjectName = foundStudent.getSubjects().get(i).getSubjectName();
+            System.out.println("과목명 : " + subjectName);
+            for(roundNumber = 1; roundNumber <= 10; roundNumber++)
+            {
+                if(foundStudent.getSubjectsMap(roundNumber).getSubject(subjectName).getScore() <= 0){
+                    break;
+                }
+
+                Score score = foundStudent.getSubjectsMap(roundNumber).getSubject(subjectName);
+                sum += score.getScore();
+                valid++;
+            }
+            if(valid > 0)
+            {
+                int average = sum / (roundNumber - 1);
+                if(subject.getSubjectType().equals(SUBJECT_TYPE_MANDATORY))
+                {   MandatoryRankEnum Rank = MandatoryRankEnum.getRank(average);
+                    System.out.println("평균 등급 : " + Rank);
+                }
+                else
+                {
+                    ChoiceRankEnum Rank = ChoiceRankEnum.getRank(average);
+                    System.out.println("평균 등급 : " + Rank);
+                }
+                System.out.println("등급 조회 성공!");
+                System.out.println();
+            }
+            else{
+                System.out.println("등록된 점수가 없습니다.");
+            }
+
+        }
+
+
+    }
