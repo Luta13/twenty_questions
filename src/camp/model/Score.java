@@ -3,6 +3,8 @@ package camp.model;
 import camp.enums.ChoiceRankEnum;
 import camp.enums.MandatoryRankEnum;
 
+import static camp.CampManagementApplication.SUBJECT_TYPE_MANDATORY;
+
 public class Score {
 
     private String subjectName;
