@@ -118,7 +118,30 @@ public class CampManagementApplication {
 
 
     private static void deleteStudent(){
+        System.out.println("\n수강생을 삭제합니다...");
+        String studentName;
+        while (true) {
+            System.out.print("수강생 이름 입력: ");
+            studentName = sc.next();
 
+            boolean found = false;
+
+            for (int i = 0; i < studentStore.size(); i++) {
+                Student student = studentStore.get(i);
+                if (student.getStudentName().equals(studentName)) {
+                    found = true;
+                    studentStore.remove(i);
+                    System.out.println(studentName + "을(를) 삭제했습니다.");
+                    break;
+                }
+            }
+
+            if (!found) {
+                System.out.println(studentName + "이(가) 존재하지 않습니다.");
+            } else {
+                break;
+            }
+        }
     }
     // 수강생 수정
     private static void correctionStudent() {
