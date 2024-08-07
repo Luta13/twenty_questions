@@ -46,6 +46,9 @@ public class CampManagementApplication {
                     case 1 -> displayStudentView(); // 수강생 관리
                     case 2 -> displayScoreView(); // 점수 관리
                     case 3 -> flag = false; // 프로그램 종료
+                    default -> {
+                        System.out.println("잘못된 입력입니다.\n되돌아갑니다!");
+                    }
                 }
             }
             System.out.println("프로그램을 종료합니다.");
@@ -75,6 +78,9 @@ public class CampManagementApplication {
                 case 3 -> correctionStudent(); // 수강생 수정
                 case 4 -> deleteStudent(); // 수강생 삭제
                 case 5 -> flag = false; // 메인 화면 이동
+                default -> {
+                    System.out.println("잘못된 입력입니다.\n되돌아갑니다!");
+                }
             }
         }
     }
@@ -97,6 +103,9 @@ public class CampManagementApplication {
                 case 2 -> updateRoundScoreBySubject(); // 수강생의 과목별 회차 점수 수정
                 case 3 -> displayInquiryView(); // 조회뷰로 이동
                 case 4 -> flag = false; // 메인 화면 이동
+                default -> {
+                    System.out.println("잘못된 입력입니다.\n되돌아갑니다!");
+                }
             }
         }
     }
@@ -113,6 +122,9 @@ public class CampManagementApplication {
         switch (input) {
             case 1 -> inquireRoundGradeBySubject();
             case 2 -> inquireAverageGradeBySubject();
+            default -> {
+                System.out.println("잘못된 입력입니다.\n되돌아갑니다!");
+            }
         }
     }
 }

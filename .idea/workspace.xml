@@ -4,25 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="- 김경민 코드 수정&#10;1. 학생 생성자에서 List&lt;Score&gt; 제거 -&gt; 학생 객체안에 직접 넣어주고 있기때문에&#10;2. 외부 List&lt;subjectScore&gt; 제거 -&gt; 학생 객체안에 직접 넣고있어서 외부꺼는 필요없음&#10;3. 기타 작업" />
-=======
-    <list default="true" id="256af94f-3cfd-41fb-a993-bafc503c6949" name="Changes" comment="">
+    <list default="true" id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="- 김경민 코드 수정&#10;1. 학생 생성자에서 List&lt;Score&gt; 제거 -&gt; 학생 객체안에 직접 넣어주고 있기때문에&#10;2. 외부 List&lt;subjectScore&gt; 제거 -&gt; 학생 객체안에 직접 넣고있어서 외부꺼는 필요없음&#10;3. 기타 작업">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app1/camp/CampManagementApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app1/camp/enums/BasicStudentInquiry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app1/camp/enums/DetaileStudentInquiry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app1/camp/enums/StatusFilterStudentInquiry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app1/camp/enums/StudentInquiry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camp-management-app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camp-management-app1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app1/camp/CampManagementApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/CampManagementApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/camp/enums/BasicStudentInquiry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/studentInquiry/BasicStudentInquiry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/camp/enums/DetaileStudentInquiry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/studentInquiry/DetaileStudentInquiry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/camp/enums/StatusFilterStudentInquiry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/studentInquiry/StatusFilterStudentInquiry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/camp/enums/StudentInquiry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/studentInquiry/StudentInquiry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/displayViews/DisplayScoreView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayViews/DisplayScoreView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/displayViews/DisplayStudentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayViews/DisplayStudentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twenty_questions1.iml" beforeDir="false" />
     </list>
->>>>>>> kkm4512
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +61,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Luta13/twenty_questions.git&quot;,
-    &quot;accountId&quot;: &quot;6e1f99c6-5671-4fa3-99b5-0e35a56569b4&quot;
+    &quot;accountId&quot;: &quot;948590c3-4e13-4760-bf8c-8b5c24fe3179&quot;
   }
 }</component>
   <component name="MavenRunner">
@@ -91,7 +81,13 @@
   "keyToString": {
     "Application.CampManagementApplication.executor": "Run",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "kkm4512"
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/nayou/OneDrive/Desktop/twenty_questions",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -123,7 +119,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="zulu-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="camp.CampManagementApplication" />
-      <module name="camp-management-app1" />
+      <module name="twenty_questions" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="camp.*" />
