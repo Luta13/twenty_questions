@@ -1,4 +1,4 @@
-package camp.enums;
+package camp.studentInquiry;
 
 public interface StudentInquiry {
     // 인터페이스를 정의하여 공통적인 메서드 시그니처 정의

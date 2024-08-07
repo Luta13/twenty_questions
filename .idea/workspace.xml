@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="- 김경민 코드 수정&#10;1. 학생 생성자에서 List&lt;Score&gt; 제거 -&gt; 학생 객체안에 직접 넣어주고 있기때문에&#10;2. 외부 List&lt;subjectScore&gt; 제거 -&gt; 학생 객체안에 직접 넣고있어서 외부꺼는 필요없음&#10;3. 기타 작업" />
+=======
+    <list default="true" id="256af94f-3cfd-41fb-a993-bafc503c6949" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app1/camp/CampManagementApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app1/camp/enums/BasicStudentInquiry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app1/camp/enums/DetaileStudentInquiry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app1/camp/enums/StatusFilterStudentInquiry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app1/camp/enums/StudentInquiry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/camp/enums/BasicStudentInquiry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/studentInquiry/BasicStudentInquiry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/camp/enums/DetaileStudentInquiry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/studentInquiry/DetaileStudentInquiry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/camp/enums/StatusFilterStudentInquiry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/studentInquiry/StatusFilterStudentInquiry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/camp/enums/StudentInquiry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/studentInquiry/StudentInquiry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/displayViews/DisplayScoreView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayViews/DisplayScoreView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/displayViews/DisplayStudentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayViews/DisplayStudentView.java" afterDir="false" />
+    </list>
+>>>>>>> kkm4512
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +50,7 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
@@ -68,32 +87,13 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CampManagementAppdlication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CampManagementApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Util.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/camp-management-app&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CampManagementApplication.executor": "Run",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "kkm4512"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -160,14 +160,6 @@
         <item itemvalue="Application.CampManagementApplication" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

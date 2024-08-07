@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e07b0294-635d-4484-8530-e7da666ed5c9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/camp-management-app/camp/enums/ChoiceRankEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/camp-management-app/camp/enums/MandatoryRankEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/camp-management-app/camp/exceptions/HandleDuplicateScore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/camp-management-app/camp/exceptions/HandleMisMatchNotNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/camp-management-app/camp/exceptions/HandleMisMatchRound.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/camp-management-app/camp/exceptions/HandleMisMatchScore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/camp-management-app/camp/exceptions/HandleMisMatchSelect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/camp-management-app/camp/exceptions/HandleMisMatchStudent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/camp-management-app/camp/model/Round.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/camp-management-app/camp/model/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camp/CampManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/camp/CampManagementApplication.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kkm4512&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Luta13/twenty_questions.git&quot;,
+    &quot;accountId&quot;: &quot;948590c3-4e13-4760-bf8c-8b5c24fe3179&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2kGZb9X3ttTyyZZvqVooyMUwC40" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CampManagementApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nayou/Test12345/twenty_questions/src&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e07b0294-635d-4484-8530-e7da666ed5c9" name="Changes" comment="" />
+      <created>1722911942914</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722911942914</updated>
+    </task>
+    <servers />
+  </component>
+</project>
