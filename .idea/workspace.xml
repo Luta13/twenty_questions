@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="- 김경민 코드 수정&#10;1. 학생 생성자에서 List&lt;Score&gt; 제거 -&gt; 학생 객체안에 직접 넣어주고 있기때문에&#10;2. 외부 List&lt;subjectScore&gt; 제거 -&gt; 학생 객체안에 직접 넣고있어서 외부꺼는 필요없음&#10;3. 기타 작업">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
-    <list default="true" id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="eunhyeong">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" afterDir="false" />
->>>>>>> 96647b4f6b3ef0338acc1d6782df1486c539d871
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,13 +243,9 @@
     <MESSAGE value="- 김경민 코드 수정 &#10;1. createScore 메서드 인자값 삭제 -&gt; 함수 내부에서 인자값 받도록 수정&#10;2. 회차 입력시 1~10회차 가 아닐시, exception 처리&#10;3. 점수 입력시 0 ~ 100 이 아닐시, exception 처리&#10;4. 회차.점수에대한 exception 생성&#10;5. if (findStudentId.isPresent()) 제거 -&gt; exception 처리를 통해 제어해주고 있기떄문&#10;6. 각 메서드에 throws Exception 추가&#10;7. testFile 삭제" />
     <MESSAGE value="- 김경민 코드 수정 &#10;1. createScore 메서드 인자값 삭제 -&gt; 함수 내부에서 인자값 받도록 수정&#10;2. 회차 입력시 1~10회차 가 아닐시, exception 처리&#10;3. 점수 입력시 0 ~ 100 이 아닐시, exception 처리&#10;4. 회차.점수에대한 exception 생성&#10;5. if (findStudentId.isPresent()) 제거 -&gt; exception 처리를 통해 제어해주고 있기떄문&#10;6. 각 메서드에 throws Exception 추가&#10;7. testFile 삭제&#10;8. 중복 코드 제거&#10;9. 필수과목,선택과목 합체" />
     <MESSAGE value="- 김경민 코드 수정&#10;1. 각종 exception 처리 구현" />
-<<<<<<< HEAD
     <MESSAGE value="- 김경민 코드 수정&#10;1. 학생 생성자에서 List&lt;Score&gt; 제거 -&gt; 학생 객체안에 직접 넣어주고 있기때문에&#10;2. 외부 List&lt;subjectScore&gt; 제거 -&gt; 학생 객체안에 직접 넣고있어서 외부꺼는 필요없음&#10;3. 기타 작업" />
-    <option name="LAST_COMMIT_MESSAGE" value="- 김경민 코드 수정&#10;1. 학생 생성자에서 List&lt;Score&gt; 제거 -&gt; 학생 객체안에 직접 넣어주고 있기때문에&#10;2. 외부 List&lt;subjectScore&gt; 제거 -&gt; 학생 객체안에 직접 넣고있어서 외부꺼는 필요없음&#10;3. 기타 작업" />
-=======
     <MESSAGE value="eunhyeong" />
     <option name="LAST_COMMIT_MESSAGE" value="eunhyeong" />
->>>>>>> 96647b4f6b3ef0338acc1d6782df1486c539d871
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
