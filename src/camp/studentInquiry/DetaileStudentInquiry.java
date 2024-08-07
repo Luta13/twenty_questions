@@ -1,4 +1,4 @@
-package camp.enums;
+package camp.studentInquiry;
 
 import java.util.ArrayList;
 import java.util.List;

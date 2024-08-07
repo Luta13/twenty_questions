@@ -1,9 +1,9 @@
 package displayViews;
 
-import camp.enums.BasicStudentInquiry;
-import camp.enums.DetaileStudentInquiry;
-import camp.enums.StatusFilterStudentInquiry;
-import camp.enums.StudentInquiry;
+import camp.studentInquiry.BasicStudentInquiry;
+import camp.studentInquiry.DetaileStudentInquiry;
+import camp.studentInquiry.StatusFilterStudentInquiry;
+import camp.studentInquiry.StudentInquiry;
 import camp.model.Round;
 import camp.model.Student;
 import camp.model.Subject;

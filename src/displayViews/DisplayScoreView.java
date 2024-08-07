@@ -81,10 +81,6 @@ public class DisplayScoreView {
                     //선택타입이면 ChoiceEnum 클래스로 랭크 계산
                 else student.getSubjectsMap(roundNumber).getSubject(subject).setChoiceRank(score);
                 System.out.println("등록이 정상적으로 마무리 되었습니다 !");
-            } catch (InputMismatchException e) {
-                sc.next();
-                System.out.println("Error : " + new HandleMisMatchNotNumber().getMessage());
-                return;
             } catch (Exception e) {
                 System.out.println("Error : " + e.getMessage());
                 return;

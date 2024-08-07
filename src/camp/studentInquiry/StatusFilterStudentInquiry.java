@@ -1,4 +1,4 @@
-package camp.enums;
+package camp.studentInquiry;
 
 import camp.model.Student;
 
