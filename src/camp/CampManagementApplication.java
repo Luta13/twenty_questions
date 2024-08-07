@@ -1,11 +1,14 @@
 package camp;
 
-import camp.enums.ChoiceRankEnum;
-import camp.enums.MandatoryRankEnum;
+//import camp.enums.ChoiceRankEnum;
+//import camp.enums.MandatoryRankEnum;
 import camp.exceptions.*;
 import camp.model.*;
 
 import java.util.*;
+import camp.enums.*;
+
+import javax.print.DocFlavor;
 
 /**
  * Notification
@@ -346,17 +349,63 @@ public class CampManagementApplication {
     }
 
     private static void inquireStudent() {
-        System.out.println("\n수강생 목록을 조회합니다...");
-        // 기능 구현
-        if (studentStore.isEmpty()) {
+        boolean flag = true; //메인화면 돌아가기
+        if (studentStore.isEmpty()) { //등록된 수강생이 없을때
+            System.out.println("==================================");
             System.out.println("등록된 수강생이 없습니다.");
-        } else {
-            for (Student stu_inquiry : studentStore) {
-                System.out.println(stu_inquiry.getStudentId() + " - " + stu_inquiry.getStudentName());
+        }else {
+            while(flag){ //메인화면으로 돌아갈 수 있도록
+                try{//목록 선택-필수,선택 조회
+                    System.out.print("================================== \n수강생 조회 목록을 선택해주세요\n 1. 기본조회(고유번호,이름) \n 2. 상세조회(고유번호,이름,상태,과목) \n 3. 상태별 목록조회  \n 4. 수강생 관리 이동 \n 관리항목을 선택하세요...");
+                    int selectInquiry=sc.nextInt();
+
+                    //객체 초기화
+                    StudentInquiry inquiry = null;
+
+                    switch (selectInquiry) {
+                        case 1: //필수 요구사항
+                            inquiry = new BasicStudentInquiry(studentStore); //Stdent 클래스에서 toSTring을 통해 기본조회 가져옴
+                            break;
+                        case 2: //선택 요구사항 상태+과목
+                            inquiry = new DetaileStudentInquiry(studentStore); // Stdent 클래스에서 상태를 Subject 클래스에서 과목이름 가져옴
+                            break;
+                        case 3 : //선택요구사항 상태별 조회
+                            System.out.print("================================== \n 원하는 상태를 번호로 입력해주세요 \n1. Green \n2. Yellow \n3. Red \n 관리항목을 선택하세요...");
+                            int colorStatus = sc.nextInt();
+                            String statusFilter; //조회할 상태 이름
+                            switch (colorStatus) {
+                                case 1 :
+                                    statusFilter = "GREEN";
+                                    break;
+                                case 2 :
+                                    statusFilter = "YELLOW";
+                                    break;
+                                case 3 :
+                                    statusFilter = "RED";
+                                    break;
+                                default:
+                                    System.out.println("잘못된 번호입니다. 다시 선택해주세요.");
+                                    continue;
+                            }
+                            inquiry = new StatusFilterStudentInquiry(studentStore,statusFilter); //상태별로 기본조회 불러옴
+                            break;
+                        case 4 :
+                            System.out.println("수강생 관리로 이동됩니다."); //관리로 이동
+                            flag = false;
+                            break;
+                        default:
+                            System.out.println("잘못된 번호 입니다 다시 선택해주세요."); // 그외 번호 입력 시 재입력창
+                    }
+                    if (inquiry != null){//inquiry 가 비어있지않으면 StudentInquiry 에서 inquire매소드를 가져옴 ( NullPointerException 방지)
+                        inquiry.inquire();
+                    }
+                }catch (InputMismatchException e){ //입력창에 정수를 입력해야하는데 잘못입력할 경우
+                    System.out.println("잘못된 입력 형식입니다. 숫자를 입력해주세요.");
+                }catch (Exception e){//포괄 예외를 방지(디테일은 부족)
+                    System.out.println("예상치 못한 오류가 발생했습니다: "+e.getMessage()); //예외 주소를 알려줌
+                }
             }
         }
-        System.out.println("\n수강생 목록 조회 성공!");
-
     }
 
     private static void displayScoreView() {

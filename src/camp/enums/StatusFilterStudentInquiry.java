@@ -18,7 +18,7 @@ public class StatusFilterStudentInquiry implements StudentInquiry{
         System.out.println("================================== \n" + statusFilter + " 상태의 수강생 목록을 조회합니다...");
         boolean found = false;
         for(Student stu_inquiry : studentStore){
-            if(stu_inquiry.getStudentStatus().equals(statusFilter)){
+            if(stu_inquiry.getStudentState().equals(statusFilter)) {
                 System.out.println(stu_inquiry);
                 found =true;
             }
