@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb9f30ca-4a57-4ae0-8242-184dc6d6458e" name="Changes" comment="- 김경민 코드 수정&#10;1. 학생 생성자에서 List&lt;Score&gt; 제거 -&gt; 학생 객체안에 직접 넣어주고 있기때문에&#10;2. 외부 List&lt;subjectScore&gt; 제거 -&gt; 학생 객체안에 직접 넣고있어서 외부꺼는 필요없음&#10;3. 기타 작업">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camp/CampManagementApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/camp-management-app1/camp/CampManagementApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/camp-management-app1/camp/CampManagementApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
